@@ -1,0 +1,34 @@
+{
+  "bands": {
+    "25-49": {
+      "ais": 2087,
+      "auroc": 0.7744,
+      "humans": 1708,
+      "tpr_at_1pct_fpr": 0.2353
+    },
+    "50-99": {
+      "ais": 5486,
+      "auroc": 0.9135,
+      "humans": 4155,
+      "tpr_at_1pct_fpr": 0.3802
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T07:48:36.906667+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 160,
+  "name": "distilroberta-base",
+  "peak_train_vram_gb": 1.73,
+  "score_ms_per_text": 1.38,
+  "settings": {
+    "model_name": "distilroberta-base"
+  },
+  "track": "short",
+  "train_rows": 24000,
+  "train_seconds": 192.3,
+  "validation": {
+    "auroc": 0.8764,
+    "tpr_at_1pct_fpr": 0.346
+  },
+  "validation_rows": 13436
+}

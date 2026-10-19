@@ -1,0 +1,1469 @@
+{
+  "ai_only_probe": {
+    "auc": {
+      "arena140k": 0.8371,
+      "openturingbench": 0.8304
+    },
+    "excluded": [],
+    "pools": {
+      "arena140k": [
+        "dolly",
+        "oasst1",
+        "no_robots"
+      ],
+      "openturingbench": [
+        "raid:news",
+        "dactyl:news",
+        "maga:cc_news",
+        "maga:npr_news"
+      ]
+    },
+    "warn_threshold": 0.85
+  },
+  "audit": {
+    "errors": [],
+    "passed": true,
+    "slices": [
+      {
+        "domain": "gempix_rationale",
+        "human": 3342,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "legacy_inhouse",
+        "split": "inhouse"
+      },
+      {
+        "domain": "personality_rationale",
+        "human": 428,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "legacy_inhouse",
+        "split": "inhouse"
+      },
+      {
+        "domain": "college_essay",
+        "human": 70,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "course_abstract",
+        "human": 145,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "student_essay",
+        "human": 88,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "toefl_essay",
+        "human": 90,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "abstracts",
+        "human": 396,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "dactyl",
+        "split": "test"
+      },
+      {
+        "domain": "news",
+        "human": 381,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "dactyl",
+        "split": "test"
+      },
+      {
+        "domain": "reviews",
+        "human": 406,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "dactyl",
+        "split": "test"
+      },
+      {
+        "domain": "student_essays",
+        "human": 391,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "dactyl",
+        "split": "test"
+      },
+      {
+        "domain": "tweets",
+        "human": 401,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "dactyl",
+        "split": "test"
+      },
+      {
+        "domain": "finance",
+        "human": 34,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "reddit_eli5",
+        "human": 325,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "amazon_reviews",
+        "human": 297,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "cc_news",
+        "human": 263,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "natural_questions",
+        "human": 296,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "npr_news",
+        "human": 294,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "reddit",
+        "human": 294,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "s2orc",
+        "human": 315,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "trustpilot_reviews",
+        "human": 301,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "wikipedia",
+        "human": 177,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "yahoo_answers",
+        "human": 304,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "maga",
+        "split": "test"
+      },
+      {
+        "domain": "cmv",
+        "human": 443,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "eli5",
+        "human": 452,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "hswag",
+        "human": 412,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "roct",
+        "human": 413,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "sci_gen",
+        "human": 385,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "squad",
+        "human": 427,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "tldr",
+        "human": 368,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "wp",
+        "human": 427,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "xsum",
+        "human": 397,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "yelp",
+        "human": 411,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "academic",
+        "human": 1946,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "comment",
+        "human": 1982,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "news",
+        "human": 1927,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "website",
+        "human": 1932,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "brainstorm",
+        "human": 185,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "chat",
+        "human": 89,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "generation",
+        "human": 221,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "open_qa",
+        "human": 58,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "academia",
+        "human": 375,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "bicycles",
+        "human": 374,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "diy",
+        "human": 375,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "mechanics",
+        "human": 372,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "photo",
+        "human": 374,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "travel",
+        "human": 374,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "workplace",
+        "human": 375,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "writers",
+        "human": 372,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange_heldout",
+        "split": "test"
+      },
+      {
+        "domain": "AWS docs",
+        "human": 12,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "CSEE (Chinese learners)",
+        "human": 43,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Django docs",
+        "human": 3,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Docker docs",
+        "human": 5,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "ELLIPSE",
+        "human": 45,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Jabarian et al. 2025",
+        "human": 60,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Kubernetes docs",
+        "human": 12,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "MDN docs",
+        "human": 15,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "PERSUADE 2.0",
+        "human": 78,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "PMC Open Access",
+        "human": 13,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Project Gutenberg",
+        "human": 4,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "Python docs",
+        "human": 3,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "UK Hansard",
+        "human": 37,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "UN General Debate",
+        "human": 22,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "US Congressional Record",
+        "human": 26,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      },
+      {
+        "domain": "wikiHow",
+        "human": 11,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "wasitai2026",
+        "split": "test"
+      }
+    ],
+    "warnings": [
+      "27 test slices have fewer than 300 human samples"
+    ]
+  },
+  "built_at": "2026-09-29T23:09:14.582224+00:00",
+  "cap_per_stratum": 3000,
+  "core_copies_of_reported_text_dropped": 596,
+  "counts": {
+    "split_generator_family": {
+      "diagnostic|alibaba": 5071,
+      "diagnostic|deepseek": 5265,
+      "diagnostic|google": 5071,
+      "diagnostic|moonshot": 4877,
+      "diagnostic|openai": 5064,
+      "diagnostic|other:template": 443,
+      "diagnostic|other:unknown": 51,
+      "stress|alibaba": 4700,
+      "stress|anthropic": 4858,
+      "stress|bytedance": 2163,
+      "stress|cohere": 2,
+      "stress|deepseek": 9527,
+      "stress|google": 5018,
+      "stress|meta": 2000,
+      "stress|mistral": 11,
+      "stress|moonshot": 2456,
+      "stress|mosaicml": 5,
+      "stress|openai": 7872,
+      "stress|other:muse-glimmer-30b": 4,
+      "stress|other:unknown": 30,
+      "stress|xai": 2495,
+      "stress|zhipu": 4,
+      "test_unseen_generator|bigscience": 30,
+      "test_unseen_generator|ibm": 600,
+      "test_unseen_generator|microsoft": 712,
+      "test_unseen_generator|tii": 589,
+      "test|alibaba": 1961,
+      "test|anthropic": 2412,
+      "test|cohere": 74,
+      "test|deepseek": 463,
+      "test|eleutherai": 19,
+      "test|google": 3235,
+      "test|meta": 1990,
+      "test|mistral": 1961,
+      "test|moonshot": 158,
+      "test|mosaicml": 3,
+      "test|openai": 4727,
+      "test|other:amazon-nova-experimental-chat-05-14": 62,
+      "test|other:amazon.nova-pro-v1:0": 64,
+      "test|other:hunyuan-7b-instruct": 238,
+      "test|other:hunyuan-turbos": 219,
+      "test|other:hunyuan-turbos-20250416": 55,
+      "test|other:intel/neural-chat-7b-v3-3": 219,
+      "test|other:mimo-v2.6-pro": 20,
+      "test|other:minimax-m1": 58,
+      "test|other:muse-glimmer-30b": 22,
+      "test|other:upstage/solar-10.7b-instruct-v1.0": 210,
+      "test|xai": 279,
+      "test|zhipu": 63,
+      "train|alibaba": 10326,
+      "train|anthropic": 6202,
+      "train|bytedance": 1458,
+      "train|cohere": 3303,
+      "train|deepseek": 7176,
+      "train|eleutherai": 1219,
+      "train|google": 15897,
+      "train|meta": 20824,
+      "train|mistral": 10715,
+      "train|moonshot": 1659,
+      "train|mosaicml": 3005,
+      "train|nvidia": 343,
+      "train|openai": 29313,
+      "train|other:amazon-nova-experimental-chat-05-14": 278,
+      "train|other:amazon.nova-pro-v1:0": 278,
+      "train|other:hunyuan-7b-instruct": 763,
+      "train|other:hunyuan-turbos": 779,
+      "train|other:hunyuan-turbos-20250416": 285,
+      "train|other:intel/neural-chat-7b-v3-3": 1078,
+      "train|other:minimax-m1": 281,
+      "train|other:upstage/solar-10.7b-instruct-v1.0": 1055,
+      "train|xai": 2907,
+      "train|zhipu": 1124,
+      "val|alibaba": 2231,
+      "val|anthropic": 1347,
+      "val|bytedance": 334,
+      "val|cohere": 688,
+      "val|deepseek": 1565,
+      "val|eleutherai": 279,
+      "val|google": 3407,
+      "val|meta": 4601,
+      "val|mistral": 2268,
+      "val|moonshot": 357,
+      "val|mosaicml": 655,
+      "val|nvidia": 71,
+      "val|openai": 6163,
+      "val|other:amazon-nova-experimental-chat-05-14": 59,
+      "val|other:amazon.nova-pro-v1:0": 57,
+      "val|other:hunyuan-7b-instruct": 162,
+      "val|other:hunyuan-turbos": 157,
+      "val|other:hunyuan-turbos-20250416": 59,
+      "val|other:intel/neural-chat-7b-v3-3": 203,
+      "val|other:minimax-m1": 58,
+      "val|other:upstage/solar-10.7b-instruct-v1.0": 235,
+      "val|xai": 641,
+      "val|zhipu": 242
+    },
+    "split_label": {
+      "diagnostic|ai": 25842,
+      "diagnostic|human": 21857,
+      "inhouse|human": 3770,
+      "stress|ai": 41145,
+      "stress|human": 393,
+      "test_unseen_generator|ai": 1931,
+      "test|ai": 18512,
+      "test|human": 20730,
+      "train|ai": 120268,
+      "train|human": 71517,
+      "val|ai": 25839,
+      "val|human": 15566
+    },
+    "split_licence_class": {
+      "diagnostic|copyleft": 7005,
+      "diagnostic|internal": 494,
+      "diagnostic|permissive": 14852,
+      "diagnostic|unknown": 25348,
+      "inhouse|internal": 3770,
+      "stress|non_commercial": 40528,
+      "stress|permissive": 438,
+      "stress|unknown": 572,
+      "test_unseen_generator|non_commercial": 235,
+      "test_unseen_generator|permissive": 1107,
+      "test_unseen_generator|unknown": 589,
+      "test|copyleft": 3752,
+      "test|non_commercial": 14940,
+      "test|permissive": 16213,
+      "test|unknown": 4337,
+      "train|copyleft": 21641,
+      "train|non_commercial": 36294,
+      "train|permissive": 112851,
+      "train|unknown": 20999,
+      "val|copyleft": 4606,
+      "val|non_commercial": 7839,
+      "val|permissive": 24471,
+      "val|unknown": 4489
+    },
+    "split_source": {
+      "diagnostic|legacy_inhouse": 494,
+      "diagnostic|rasbt50k": 47205,
+      "inhouse|legacy_inhouse": 3770,
+      "stress|detector_bias": 572,
+      "stress|mirage": 40528,
+      "stress|raid": 17,
+      "stress|wasitai2026": 421,
+      "test_unseen_generator|mage": 30,
+      "test_unseen_generator|openturingbench": 235,
+      "test_unseen_generator|stackexchange_heldout": 1666,
+      "test|arena140k": 2993,
+      "test|dactyl": 4032,
+      "test|hc3": 761,
+      "test|lede": 4996,
+      "test|maga": 5106,
+      "test|mage": 5056,
+      "test|mirage": 7889,
+      "test|no_robots": 553,
+      "test|openturingbench": 1315,
+      "test|raid": 11,
+      "test|stackexchange": 6,
+      "test|stackexchange_heldout": 5389,
+      "test|wasitai2026": 1135,
+      "train|aita2026": 4776,
+      "train|arena140k": 13933,
+      "train|beemo": 3615,
+      "train|dactyl": 12916,
+      "train|dolly": 5288,
+      "train|hc3": 15919,
+      "train|maga": 17090,
+      "train|mage": 43949,
+      "train|mirage": 27562,
+      "train|no_robots": 2369,
+      "train|oasst1": 4510,
+      "train|openturingbench": 6363,
+      "train|raid": 25970,
+      "train|stackexchange": 7525,
+      "val|aita2026": 1024,
+      "val|arena140k": 3030,
+      "val|beemo": 750,
+      "val|dactyl": 2977,
+      "val|dolly": 1248,
+      "val|hc3": 3358,
+      "val|maga": 3860,
+      "val|mage": 9528,
+      "val|mirage": 5933,
+      "val|no_robots": 584,
+      "val|oasst1": 937,
+      "val|openturingbench": 1322,
+      "val|raid": 5384,
+      "val|stackexchange": 1470
+    },
+    "stress_transform_label": {
+      "attack:alternative_spelling|ai": 1,
+      "attack:article_deletion|ai": 3,
+      "attack:homoglyph|ai": 2,
+      "attack:insert_paragraphs|ai": 1,
+      "attack:number|ai": 1,
+      "attack:perplexity_misspelling|ai": 1,
+      "attack:synonym|ai": 4,
+      "attack:upper_lower|ai": 1,
+      "attack:whitespace|ai": 1,
+      "attack:zero_width_space|ai": 2,
+      "humanizer:cleverhumanizer|ai": 80,
+      "humanizer:rephrasy|ai": 60,
+      "humanizer:stealthgpt|ai": 100,
+      "humanizer:undetectableai|ai": 1,
+      "humanizer:undetectedgpt|ai": 60,
+      "humanizer:walterwrites|ai": 60,
+      "humanizer:writehuman|ai": 60,
+      "llm_polish|ai": 19495,
+      "llm_rewrite|ai": 21124,
+      "llm_simplify|ai": 88,
+      "none|human": 393
+    }
+  },
+  "duplicates": {
+    "exact_duplicates_dropped": 5144,
+    "label_conflicts_dropped": 24
+  },
+  "earlier_texts": 351517,
+  "excluded_holdout_from_fit": 71693,
+  "holdout_families": [
+    "bigscience",
+    "ibm",
+    "microsoft",
+    "tii"
+  ],
+  "holdout_sources": [
+    "lede",
+    "stackexchange_heldout",
+    "wasitai2026"
+  ],
+  "near_duplicate_retired": 26063,
+  "near_duplicate_retired_by_source": {
+    "arena140k": 8,
+    "dactyl": 6,
+    "hc3": 37,
+    "maga": 167,
+    "mage": 25723,
+    "mirage": 99,
+    "no_robots": 2,
+    "raid": 2,
+    "rasbt50k": 17,
+    "stackexchange": 2
+  },
+  "redactions": {
+    "CARD": 534,
+    "EMAIL": 2176,
+    "IP": 225,
+    "PHONE": 1437
+  },
+  "retired_by_audit_check": 0,
+  "retired_rows_present": 100020,
+  "retired_seen_ids": 217918,
+  "shortcut_probe": {
+    "evaluated_on": "val",
+    "features": [
+      "log_chars",
+      "log_words",
+      "mean_word_len",
+      "newline_rate",
+      "upper_ratio",
+      "digit_ratio",
+      "punct_ratio",
+      "non_ascii_ratio",
+      "starts_lower",
+      "no_terminal_punct",
+      "placeholders",
+      "has_line_break",
+      "has_blank_line",
+      "log_line_breaks",
+      "asterisks",
+      "backticks",
+      "spaced_dashes",
+      "inline_numbered",
+      "bullets"
+    ],
+    "flagged_sources": [
+      "stackexchange"
+    ],
+    "overall_auc": 0.6836,
+    "per_source_auc": {
+      "aita2026": 0.4984,
+      "beemo": 0.6183,
+      "dactyl": 0.5854,
+      "dolly": 0.67,
+      "hc3": 0.7204,
+      "maga": 0.7059,
+      "mage": 0.5272,
+      "mirage": 0.7756,
+      "oasst1": 0.6262,
+      "raid": 0.5607,
+      "stackexchange": 0.7797
+    },
+    "per_source_own_probe_auc": {
+      "aita2026": 0.7689,
+      "beemo": 0.6495,
+      "dactyl": 0.7004,
+      "dolly": 0.7726,
+      "hc3": 0.8211,
+      "maga": 0.7915,
+      "mage": 0.6263,
+      "mirage": 0.832,
+      "oasst1": 0.7414,
+      "raid": 0.7191,
+      "stackexchange": 0.8915
+    },
+    "raw_text_reference": {
+      "overall_auc": 0.7665,
+      "per_source_auc": {
+        "aita2026": 0.4493,
+        "beemo": 0.6723,
+        "dactyl": 0.6978,
+        "dolly": 0.7202,
+        "hc3": 0.7737,
+        "maga": 0.8189,
+        "mage": 0.5331,
+        "mirage": 0.7929,
+        "oasst1": 0.5796,
+        "raid": 0.9115,
+        "stackexchange": 0.648
+      }
+    },
+    "status": "ok",
+    "text_view": "format4+typography+collapse_whitespace",
+    "train_ai_share_by_source": {
+      "aita2026": 0.5,
+      "arena140k": 1.0,
+      "beemo": 0.5007,
+      "dactyl": 0.4968,
+      "dolly": 0.3877,
+      "hc3": 0.5507,
+      "maga": 0.4996,
+      "mage": 0.5017,
+      "mirage": 0.8791,
+      "no_robots": 0.0,
+      "oasst1": 0.4497,
+      "openturingbench": 1.0,
+      "raid": 0.6413,
+      "stackexchange": 0.6699
+    },
+    "warn_threshold": 0.85
+  },
+  "source_test_share": {
+    "aita2026": 0.35,
+    "dactyl": 0.2,
+    "maga": 0.2,
+    "mirage": 0.35,
+    "no_robots": 0.35
+  },
+  "sources": [
+    {
+      "files": [
+        {
+          "path": "train.csv",
+          "sha256": "07b95008964d6be412aa764aa1e515d652c345305cebc522a7612c6015ba373a",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/train.csv"
+        },
+        {
+          "path": "valid.csv",
+          "sha256": "005e200957a4da551c8ac37079f43811db9c32f5141e3bdabb1caa257588691f",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/valid.csv"
+        },
+        {
+          "path": "test.csv",
+          "sha256": "dcb8a8a8de1459d382ac2da5e0f1c39452e8bc47d186d7393f3ed4308f762ac7",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test.csv"
+        },
+        {
+          "path": "test_ood_set_gpt.csv",
+          "sha256": "b9fe1faaa45fbbad446f527da12d42e3e9e3bbd207f7ea054e81ec8e922016d2",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test_ood_set_gpt.csv"
+        },
+        {
+          "path": "test_ood_set_gpt_para.csv",
+          "sha256": "a587909d155447ea2768cbd8f695a7febb65cdd7414da5c3b5ff6d6397463725",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test_ood_set_gpt_para.csv"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 61562,
+      "name": "mage"
+    },
+    {
+      "files": [
+        {
+          "path": "finance.jsonl",
+          "sha256": "72e3a439714c4693e115f8ad0b917988688abc07acba8de812198cb13cd5d72e",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/finance.jsonl"
+        },
+        {
+          "path": "medicine.jsonl",
+          "sha256": "7141b0f5b3477543e95e24a2b268f46c375b08703a390e9a04ff69f5193caa28",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/medicine.jsonl"
+        },
+        {
+          "path": "open_qa.jsonl",
+          "sha256": "4d968e1e1473cbdf5978024872768f0c6f27dacf681f35166dc191733dccd664",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/open_qa.jsonl"
+        },
+        {
+          "path": "reddit_eli5.jsonl",
+          "sha256": "448cebaf7fdf27560daf6cc87cc1464be4988cf8110c0ec40c40b21c2c0193db",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/reddit_eli5.jsonl"
+        },
+        {
+          "path": "wiki_csai.jsonl",
+          "sha256": "4f78105c72e7edd3b619b3b44abac1e6f8bdb42211f22e43191d4dae889e1968",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/wiki_csai.jsonl"
+        }
+      ],
+      "licence": "CC-BY-SA-4.0",
+      "licence_class": "copyleft",
+      "loaded": 20442,
+      "name": "hc3"
+    },
+    {
+      "files": [
+        {
+          "path": "train.csv",
+          "sha256": "52f04ceebc126064e68fbd22d8b736964065745464f4bfd52e488150b49f84e4",
+          "url": "https://huggingface.co/datasets/liamdugan/raid/resolve/main/train.csv"
+        }
+      ],
+      "licence": "MIT",
+      "licence_class": "permissive",
+      "loaded": 70307,
+      "name": "raid"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "5df88f7941e873db3c6e2be4e4085db50fa824f7fc626685f0e317e935a188db",
+          "url": "https://huggingface.co/datasets/toloka/beemo/resolve/main/data/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "MIT",
+      "licence_class": "permissive",
+      "loaded": 19683,
+      "name": "beemo"
+    },
+    {
+      "files": [
+        {
+          "path": "DIG/generate.json",
+          "sha256": "4e835ba766ea8249013794625e098f4d30ece7cdd93518ca8ded4b7a6bad82c8",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/generate.json"
+        },
+        {
+          "path": "DIG/polish.json",
+          "sha256": "cc941cb996a1beff5649aeb33bba670235efffebe646779975cb6796dad2e818",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/polish.json"
+        },
+        {
+          "path": "DIG/rewrite.json",
+          "sha256": "c78ca21d14e21721ec3b0974a603b994d73e81692a27b2c504dac07542ac4526",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/rewrite.json"
+        },
+        {
+          "path": "SIG/generate.json",
+          "sha256": "60ceb27f72019b8081d3e4fbe329b218b395331dd6cf4c1e7d2ed3ce5ba7b7a3",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/generate.json"
+        },
+        {
+          "path": "SIG/polish.json",
+          "sha256": "d1107a8d78308ae52aa5f465f585ac5edac1e78a99177d3b5b4f6823869b978b",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/polish.json"
+        },
+        {
+          "path": "SIG/rewrite.json",
+          "sha256": "a45c2f15c740afc5b96edf027a9b814901de32188e3f06ee3ea4606ac6456e2f",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/rewrite.json"
+        }
+      ],
+      "licence": "Pi-Lab-1.0",
+      "licence_class": "non_commercial",
+      "loaded": 96594,
+      "name": "mirage"
+    },
+    {
+      "files": [
+        {
+          "path": "TOEFL_real_91.json",
+          "sha256": "d5e2bf0bd4831262d60aa936b2ac8e532bd3859067411288b6c22ed16867666b",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/TOEFL_real_91/data.json"
+        },
+        {
+          "path": "HewlettStudentEssay_real_88.json",
+          "sha256": "6145e4e8bf36b780624626b31a783d7ca97696e1e14ae6d13c083b79da2f042d",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/HewlettStudentEssay_real_88/data.json"
+        },
+        {
+          "path": "CollegeEssay_real_70.json",
+          "sha256": "37534035e5ad8bbb7a362433644b38c6b8d45ad9c444836cc89a7013eb0d9917",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/CollegeEssay_real_70/data.json"
+        },
+        {
+          "path": "CS224N_real_145.json",
+          "sha256": "fa62fd0355b7121283feb3ee4468bd0db23ba7847806a04d4a754f77b723a31d",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/CS224N_real_145/data.json"
+        },
+        {
+          "path": "TOEFL_gpt4polished_91.json",
+          "sha256": "8dcbce862bc54259666c77d68ed43927af9d4cfd350c57ff1b250c21860256c6",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/TOEFL_gpt4polished_91/data.json"
+        },
+        {
+          "path": "HewlettStudentEssay_GPTsimplify_88.json",
+          "sha256": "59fef9d557c689f1a508269b780f37bab548346d5033c455c3e211a99c1feba3",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/HewlettStudentEssay_GPTsimplify_88/data.json"
+        }
+      ],
+      "licence": "other-open (Zenodo 10.5281/zenodo.7893958)",
+      "licence_class": "unknown",
+      "loaded": 573,
+      "name": "detector_bias"
+    },
+    {
+      "files": [],
+      "licence": "internal",
+      "licence_class": "internal",
+      "loaded": 7544,
+      "name": "legacy_inhouse"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "9cc863804d42e473832c2dd485a6551aa92f33c1223aa1a5c83ccfd1d412cf45",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "validation-00000-of-00001.parquet",
+          "sha256": "dfb499b211b3125aea56c868f6d991316733b43c4a0de0bddbc33f466f42f6a9",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/validation-00000-of-00001.parquet"
+        },
+        {
+          "path": "test-00000-of-00001.parquet",
+          "sha256": "8444233e096d3b8636bf911ca0175d07c6951775ba41472cbc6f88500e4c7ac7",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/test-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "per-row source licence (CC0, CC BY, CC BY-SA, public domain)",
+      "licence_class": "copyleft",
+      "loaded": 47205,
+      "name": "rasbt50k"
+    },
+    {
+      "files": [
+        {
+          "path": "dataset.jsonl",
+          "sha256": "1141db8f318e1f1525f16a7f01218a081e847d12cbc07238f93294dfc4ca017e",
+          "url": "https://huggingface.co/datasets/mild-rgb/aita-human-vs-ai/resolve/main/dataset.jsonl"
+        },
+        {
+          "path": "anecdotes.tar.gz",
+          "sha256": "0d7872b802dcf6f7982dd308caa2d247f4d144739350ac606f77730e07c4d2b3",
+          "url": "https://storage.googleapis.com/ai2-mosaic-public/projects/scruples/v1.0/data/anecdotes.tar.gz"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 5800,
+      "name": "aita2026"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "76d64120a2ab20eb85d6b22bdced5b1ec638a6213a97004741006745c92489ef",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/no_robots/resolve/main/data/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "test-00000-of-00001.parquet",
+          "sha256": "60707b2636a46e37bb0c1e9ca263a18553f430317b7a53c691676d6a492fc0f2",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/no_robots/resolve/main/data/test-00000-of-00001.parquet"
+        },
+        {
+          "path": "beemo.parquet",
+          "sha256": "5df88f7941e873db3c6e2be4e4085db50fa824f7fc626685f0e317e935a188db",
+          "url": "https://huggingface.co/datasets/toloka/beemo/resolve/main/data/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "CC-BY-NC-4.0",
+      "licence_class": "non_commercial",
+      "loaded": 3511,
+      "name": "no_robots"
+    },
+    {
+      "files": [
+        {
+          "path": "databricks-dolly-15k.jsonl",
+          "sha256": "2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec",
+          "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/databricks-dolly-15k.jsonl"
+        }
+      ],
+      "licence": "CC-BY-SA-3.0",
+      "licence_class": "copyleft",
+      "loaded": 6542,
+      "name": "dolly"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001-b42a775f407cee45.parquet",
+          "sha256": "bbfadf5ed1278ba2208c837fdcad865adf65f5df55d80abadab2745db13fcb5e",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/main/data/train-00000-of-00001-b42a775f407cee45.parquet"
+        },
+        {
+          "path": "validation-00000-of-00001-134b8fd0c89408b6.parquet",
+          "sha256": "24002597bb13a7edd42d92f773762f25e285f72c31a70449393d0ded1dc7b416",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/main/data/validation-00000-of-00001-134b8fd0c89408b6.parquet"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 5447,
+      "name": "oasst1"
+    },
+    {
+      "files": [
+        {
+          "path": "cooking.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "92f037fb6ff4c75c216540959179b4680cfb719baeabd24108acbe469ee3308a",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/cooking.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "gardening.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "4418b1ec61bd412637334b25142cf90f453834b7fe36d8df6c76490ac83d581c",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/gardening.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "money.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "3da6f52cac1b08173f04cf66b65bc83209070a9c3fad476ccc9ce0b2d27bd9e9",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/money.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "parenting.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "d2578155daf8ce02fadfbed82b9facd5e6f745b13463e4b0296d628131bd57a6",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/parenting.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "pets.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "2cca1756b4e60875a8f5d4635863342dbf88c02fe72a1058efbb4b19db0a53e6",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/pets.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "outdoors.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "6dcbf78baa3dbb90f9088b1b24de03e2e8c2ebdb87ff4a8934ea536c7c786a7d",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/outdoors.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "fitness.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "3d457225de5a52030f285d10a62a23cf34d66f07cedafc55dc4fc952f6a36daf",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/fitness.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "interpersonal.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "890466703d2a46c1f9b372b8440d9c8dc6b944a3afa0ab8e4224e69055f83b95",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/interpersonal.stackexchange.com/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "CC-BY-SA-4.0",
+      "licence_class": "copyleft",
+      "loaded": 9390,
+      "name": "stackexchange"
+    },
+    {
+      "files": [
+        {
+          "path": "travel.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "a71ac453d0f0b64de2c59864f8943957ab1a84ab502328230766b4bf075428ba",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/travel.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "diy.stackexchange.com/train-00000-of-00002.parquet",
+          "sha256": "9081cd85df3e2b0af7d33084e27477fd6e4688159806a63776dfc9a60ad38791",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/diy.stackexchange.com/train-00000-of-00002.parquet"
+        },
+        {
+          "path": "diy.stackexchange.com/train-00001-of-00002.parquet",
+          "sha256": "add528dc67ead8fc080e33aa5a6f29107e206ea674e84d68d2d211038a3d6fd9",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/diy.stackexchange.com/train-00001-of-00002.parquet"
+        },
+        {
+          "path": "workplace.stackexchange.com/train-00000-of-00002.parquet",
+          "sha256": "f27fba6a9d9b023486d7f31fc8a752e47f66086694224f4b7908db4d3ae22d08",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/workplace.stackexchange.com/train-00000-of-00002.parquet"
+        },
+        {
+          "path": "workplace.stackexchange.com/train-00001-of-00002.parquet",
+          "sha256": "8c9f14d2126c3a3a65609cadde3aeaf54dbf95555a62d55b2c38e7a0ed2073c6",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/workplace.stackexchange.com/train-00001-of-00002.parquet"
+        },
+        {
+          "path": "academia.stackexchange.com/train-00000-of-00002.parquet",
+          "sha256": "7a21b3056b6e454de73ec27d331a641f57662a52e08a278ac302019c07d60de5",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/academia.stackexchange.com/train-00000-of-00002.parquet"
+        },
+        {
+          "path": "academia.stackexchange.com/train-00001-of-00002.parquet",
+          "sha256": "a4c07de38f2f3001f1fef4ad64f6cb77101e816532b0070f36840b8db776de4b",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/academia.stackexchange.com/train-00001-of-00002.parquet"
+        },
+        {
+          "path": "bicycles.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "b4fae09172fd337c8ed24a3463d83945ad2af147b6e701b75c6daa401d2e4134",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/bicycles.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "mechanics.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "d2d4342556698c2bd317e161f8c4e1611a604a8d3466e96d425f95e4bd1d3a3e",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/mechanics.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "photo.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "699ff2f994fc6674458fb44c35a34e33d785e979ee12237197bdb606238d8a1b",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/photo.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "writers.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "0631742f4160f79a312c766c8a34166c617f137e4adcfec272819e77038b73c1",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/writers.stackexchange.com/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "CC-BY-SA-4.0",
+      "licence_class": "copyleft",
+      "loaded": 7064,
+      "name": "stackexchange_heldout"
+    },
+    {
+      "files": [
+        {
+          "path": "data/benchmark.parquet",
+          "sha256": "aa57e91849693e99b2cb468360aaa8b082c91708e66a2a469c7ddbb4c07b8b5a",
+          "url": "https://huggingface.co/datasets/wasitaigeneratedcom/ai-detector-benchmark-2026-09/resolve/main/data/benchmark.parquet"
+        }
+      ],
+      "licence": "mixed per row (dataset card: other)",
+      "licence_class": "unknown",
+      "loaded": 1556,
+      "name": "wasitai2026"
+    },
+    {
+      "files": [
+        {
+          "path": "data/Eng/Claude_Opus_4.6_Eng.csv",
+          "sha256": "17d251928fe62c8227b259f2c79fcedb75a5bb2f847511dabc8ff7a46026c108",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/Claude_Opus_4.6_Eng.csv"
+        },
+        {
+          "path": "data/Eng/Claude_Sonnet_4.5_Eng.csv",
+          "sha256": "b61eb30b3d660a769afb2b8a0208722e741236c4e2e9eb56226f756c331ffd9f",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/Claude_Sonnet_4.5_Eng.csv"
+        },
+        {
+          "path": "data/Eng/Claude_Sonnet_4.6_Eng.csv",
+          "sha256": "b6f7eb4672049cfaa85fc935f9b96e0fd2c685ad06eb88a6411c9ea65640bd16",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/Claude_Sonnet_4.6_Eng.csv"
+        },
+        {
+          "path": "data/Eng/GPT_5_Eng.csv",
+          "sha256": "60390473cca4945dd91c2a0dece675bcfd1f1c0526915e0c6ca41699d6b2ec5f",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/GPT_5_Eng.csv"
+        },
+        {
+          "path": "data/Eng/GPT_5_nano_Eng.csv",
+          "sha256": "e6b681d117ae0a416733b820b1a0e1614134ee44314e9171dce21a2028464a5e",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/GPT_5_nano_Eng.csv"
+        },
+        {
+          "path": "data/Eng/GPT_5.4_Eng.csv",
+          "sha256": "fd3433d0b768be089e42d1ebaa29c1d5b5860d820146d3c36d29a059a20e2618",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/GPT_5.4_Eng.csv"
+        },
+        {
+          "path": "data/Eng/GPT_5.4_nano_Eng.csv",
+          "sha256": "a0d0639a33a6a4e2c77bfdec47bf36ddc9f29da3071d864c6fd635c040774dee",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/GPT_5.4_nano_Eng.csv"
+        },
+        {
+          "path": "data/Eng/GPT_5.4_pro_Eng.csv",
+          "sha256": "55f1b45a21ab56f076cbcecfbdaf0dc86778b6dbee81eac5d35c114b42cb26c1",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/GPT_5.4_pro_Eng.csv"
+        },
+        {
+          "path": "data/Eng/Gemini_3.1_Flash_Eng.csv",
+          "sha256": "884b9d4697d74d7bcd5e0c2caca93c369b49330332ea21351eaf370fbf24e6c1",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/Gemini_3.1_Flash_Eng.csv"
+        },
+        {
+          "path": "data/Eng/Gemini_3.1_Pro_Eng.csv",
+          "sha256": "8e1223248887fa2cb4e781947e599a77e3b0050a04e55c5c0ab6482f365203ce",
+          "url": "https://huggingface.co/datasets/NeurIPS-2026-LEDE/LEDE-dataset/resolve/main/data/Eng/Gemini_3.1_Pro_Eng.csv"
+        }
+      ],
+      "licence": "CC-BY-NC-4.0",
+      "licence_class": "non_commercial",
+      "loaded": 4999,
+      "name": "lede"
+    },
+    {
+      "files": [
+        {
+          "path": "train/MGB_train.jsonl",
+          "sha256": "bb968ac60a1e963a9d2e36b478b0989e63cf106587f54f939880cae19e12b779",
+          "url": "https://huggingface.co/datasets/anyangsong/MAGA/resolve/main/train/MGB_train.jsonl"
+        },
+        {
+          "path": "val/MGB_val.jsonl",
+          "sha256": "58c4533f19a04c884161e1a6f1c81b2827f1d34586b7b26f0c6e9fa931d6468f",
+          "url": "https://huggingface.co/datasets/anyangsong/MAGA/resolve/main/val/MGB_val.jsonl"
+        },
+        {
+          "path": "train/MAGA_train.jsonl",
+          "sha256": "c308778e590c62dc39c366b348ae55242de00cb3fa874793276f53750ecce9b4",
+          "url": "https://huggingface.co/datasets/anyangsong/MAGA/resolve/main/train/MAGA_train.jsonl"
+        },
+        {
+          "path": "val/MAGA_val.jsonl",
+          "sha256": "8407db9f2c637fd22f5a12261ced20d56ece30fd7933f4ca58f2a76b6edbc683",
+          "url": "https://huggingface.co/datasets/anyangsong/MAGA/resolve/main/val/MAGA_val.jsonl"
+        }
+      ],
+      "licence": "MIT",
+      "licence_class": "permissive",
+      "loaded": 26084,
+      "name": "maga"
+    },
+    {
+      "files": [
+        {
+          "path": "train.parquet",
+          "sha256": "5e4b29a23712b4486b4ce1cfc2dd54325d1911b90d1bd25ec139025374ee063d",
+          "url": "https://huggingface.co/datasets/ShantanuT01/DACTYL/resolve/main/train.parquet"
+        },
+        {
+          "path": "validation.parquet",
+          "sha256": "ab4399cbf3b13c0ab2d1bc8dcded6fdf015a860d48a1005b4f13c2bd58c19f06",
+          "url": "https://huggingface.co/datasets/ShantanuT01/DACTYL/resolve/main/validation.parquet"
+        },
+        {
+          "path": "test.parquet",
+          "sha256": "479de73bc1b412a3b0ce9b0a11bedbddae4996881fcd5e14d91a3d2d6f737a43",
+          "url": "https://huggingface.co/datasets/ShantanuT01/DACTYL/resolve/main/test.parquet"
+        }
+      ],
+      "licence": "MIT (dataset card; the paper says CC-BY-4.0)",
+      "licence_class": "permissive",
+      "loaded": 19983,
+      "name": "dactyl"
+    },
+    {
+      "files": [
+        {
+          "path": "data/train-00000-of-00007.parquet",
+          "sha256": "7b871a964dc9b238fe0d59f817dbe1a7a56934e23ec4d989f86e6891e5a891cf",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00000-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00001-of-00007.parquet",
+          "sha256": "0cd29a6e3261159f41a69b28cd7f08c0bbbc1ef08ba18438d386a1b0c144af8a",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00001-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00002-of-00007.parquet",
+          "sha256": "c633264fe8f0fa26cc9aa49961a75dc428791f70c7a476cbed766963b88bee24",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00002-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00003-of-00007.parquet",
+          "sha256": "5bcf04c9f4488006a4a7ee944d886ee123e118b7f7d2db04b4ff6dbd8125e6b0",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00003-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00004-of-00007.parquet",
+          "sha256": "2c50b4b3f6a5c02d660f5a70d5006332ddc00f5eb21f8e4d92bde3856647969b",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00004-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00005-of-00007.parquet",
+          "sha256": "de59f74dce7477beaec55936b31a88537b93c5cbb4b483cfc6879a6862ce5e3b",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00005-of-00007.parquet"
+        },
+        {
+          "path": "data/train-00006-of-00007.parquet",
+          "sha256": "1a32a1c6934ebcaa3019643a08fb57563ee0a9be282d3222def3c572a49e9f4c",
+          "url": "https://huggingface.co/datasets/lmarena-ai/arena-human-preference-140k/resolve/main/data/train-00006-of-00007.parquet"
+        }
+      ],
+      "licence": "prompts CC-BY-4.0; outputs under model providers' terms",
+      "licence_class": "unknown",
+      "loaded": 20041,
+      "name": "arena140k"
+    },
+    {
+      "files": [
+        {
+          "path": "in-domain/val.json",
+          "sha256": "5808d825cf67aea0110d7149f776d549aef69c236235e1af6dc8234d599709aa",
+          "url": "https://huggingface.co/datasets/MLNTeam-Unical/OpenTuringBench/resolve/main/in-domain/val.json"
+        },
+        {
+          "path": "in-domain/test.json",
+          "sha256": "6ba6e857202b7530ca950012b9786fed8e32fb701fe0c30d090e46925729b260",
+          "url": "https://huggingface.co/datasets/MLNTeam-Unical/OpenTuringBench/resolve/main/in-domain/test.json"
+        }
+      ],
+      "licence": "CC-BY-NC-4.0",
+      "licence_class": "non_commercial",
+      "loaded": 10500,
+      "name": "openturingbench"
+    }
+  ],
+  "split_salt": "v4",
+  "stress_follows_parent": [
+    "beemo"
+  ],
+  "test_lock_sha256": "549b3f1040890c881f898d819f6e8c637499884cbab36543edc0424ba46d2d24",
+  "total": 367370,
+  "version": "v4"
+}

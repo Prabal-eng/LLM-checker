@@ -1,0 +1,46 @@
+{
+  "bands": {
+    "100-199": {
+      "ais": 3869,
+      "auroc": 0.9748,
+      "humans": 1983,
+      "tpr_at_1pct_fpr": 0.703
+    },
+    "200+": {
+      "ais": 1985,
+      "auroc": 0.9348,
+      "humans": 1963,
+      "tpr_at_1pct_fpr": 0.2992
+    },
+    "25-49": {
+      "ais": 884,
+      "auroc": 0.6934,
+      "humans": 908,
+      "tpr_at_1pct_fpr": 0.0656
+    },
+    "50-99": {
+      "ais": 842,
+      "auroc": 0.8526,
+      "humans": 1026,
+      "tpr_at_1pct_fpr": 0.1995
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T05:26:42.091913+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 256,
+  "name": "distilroberta-base",
+  "peak_train_vram_gb": 1.91,
+  "score_ms_per_text": 2.19,
+  "settings": {
+    "model_name": "distilroberta-base"
+  },
+  "track": "main",
+  "train_rows": 24000,
+  "train_seconds": 254.0,
+  "validation": {
+    "auroc": 0.9124,
+    "tpr_at_1pct_fpr": 0.4705
+  },
+  "validation_rows": 13844
+}

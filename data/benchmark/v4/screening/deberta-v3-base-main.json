@@ -1,0 +1,50 @@
+{
+  "bands": {
+    "100-199": {
+      "ais": 3869,
+      "auroc": 0.9834,
+      "humans": 1983,
+      "tpr_at_1pct_fpr": 0.7622
+    },
+    "200+": {
+      "ais": 1985,
+      "auroc": 0.9593,
+      "humans": 1963,
+      "tpr_at_1pct_fpr": 0.3985
+    },
+    "25-49": {
+      "ais": 884,
+      "auroc": 0.8209,
+      "humans": 908,
+      "tpr_at_1pct_fpr": 0.2206
+    },
+    "50-99": {
+      "ais": 842,
+      "auroc": 0.9037,
+      "humans": 1026,
+      "tpr_at_1pct_fpr": 0.2162
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T06:11:10.237570+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 256,
+  "name": "deberta-v3-base",
+  "peak_train_vram_gb": 2.3,
+  "score_ms_per_text": 7.6,
+  "settings": {
+    "gradient_checkpointing": true,
+    "lr": 2e-05,
+    "model_name": "microsoft/deberta-v3-base",
+    "optimizer": "adamw8bit",
+    "precision": "fp16"
+  },
+  "track": "main",
+  "train_rows": 24000,
+  "train_seconds": 947.8,
+  "validation": {
+    "auroc": 0.9466,
+    "tpr_at_1pct_fpr": 0.5391
+  },
+  "validation_rows": 13844
+}

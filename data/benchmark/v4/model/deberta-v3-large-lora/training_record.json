@@ -1,0 +1,57 @@
+{
+  "artifact_path": "D:\\llm-authorship-corpus\\models\\deberta-v3-large-lora-authorship-4d\\merged-0.1",
+  "artifact_sha256": "f2a9396eacc8942d0b136356fdd84228c958c4c77499f15b84327ea476cd10fe",
+  "balance_sources": true,
+  "base_model": "microsoft/deberta-v3-large",
+  "candidate": "deberta-v3-large-lora",
+  "checks": {
+    "0.1": {
+      "auroc": 0.9714,
+      "tpr_at_1pct_fpr": 0.6966
+    },
+    "0.2": {
+      "auroc": 0.9663,
+      "tpr_at_1pct_fpr": 0.6431
+    },
+    "0.3": {
+      "auroc": 0.9709,
+      "tpr_at_1pct_fpr": 0.6111
+    }
+  },
+  "checks_per_epoch": 4,
+  "chosen_check": "0.1",
+  "corpus_lock_sha256": "549b3f1040890c881f898d819f6e8c637499884cbab36543edc0424ba46d2d24",
+  "finished_at": "2026-09-30T03:54:54.001626+00:00",
+  "group_by_length": true,
+  "locked_split_reads": 0,
+  "lora_merged": true,
+  "max_epochs": 3,
+  "max_tokens": 256,
+  "model_id": "deberta-v3-large-lora-authorship-4d",
+  "patience": 2,
+  "peak_train_vram_gb": 2.118779392,
+  "precision": "fp16",
+  "recipe": {
+    "accumulate": 1,
+    "batch_size": 16,
+    "gradient_checkpointing": true,
+    "lora": {
+      "alpha": 32,
+      "r": 16
+    },
+    "lr": 0.0002,
+    "model_name": "microsoft/deberta-v3-large",
+    "precision": "fp16",
+    "score_batch_size": 16
+  },
+  "settings": "fullbatch",
+  "stopped_early": true,
+  "text_normalization": "format4+typography+collapse_whitespace",
+  "text_view_sha256": "d32c4612c2bbbf3b97e680670fda5c4dd48c19bb18989c0aa194239cc306238e",
+  "train_excerpts": 0,
+  "train_ids_sha256": "52e6050fea2122b8737588bc320500095a4920172b68f0d52835c0c176fbdc5f",
+  "train_rows": 191785,
+  "validation_ids_sha256": "531b8daa7a95bff3ad0a75983f86025c8a5b527745d284e9df34ab7a55392aad",
+  "validation_rows": 23609,
+  "variant": "main"
+}

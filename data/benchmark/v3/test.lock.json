@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "inhouse|human": 3770,
+    "stress|ai": 41145,
+    "stress|human": 393,
+    "test_unseen_generator|ai": 1511,
+    "test|ai": 13219,
+    "test|human": 11319
+  },
+  "history": [
+    {
+      "at": "2026-09-27T20:33:19.387801+00:00",
+      "previous": "7ba11a786f19f1072926944949412fc8bb44672aa2aeaa7ecf438527f200ca5f",
+      "reason": "Amendment 6 (Ralph R08-5): lock lines now carry the source and the exact-text SHA-256; rows and splits unchanged"
+    }
+  ],
+  "locked_splits": [
+    "test",
+    "test_unseen_generator",
+    "stress",
+    "inhouse"
+  ],
+  "sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349"
+}

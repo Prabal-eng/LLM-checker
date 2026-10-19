@@ -1,0 +1,37 @@
+{
+  "cpu": {
+    "checks": {
+      "p95_ms": true
+    },
+    "limits": {
+      "p95_ms": 20000.0
+    },
+    "measured_at": "2026-09-30T19:08:57.965732+00:00",
+    "p95_ms": 3833.7,
+    "passed": true,
+    "sheet_rows_timed": 20,
+    "sheet_seconds": 7041.4,
+    "sheet_seconds_batched": 3177.9
+  },
+  "cuda": {
+    "checks": {
+      "p95_ms": true,
+      "peak_vram_gb": true,
+      "sheet_seconds": true
+    },
+    "limits": {
+      "p95_ms": 500.0,
+      "peak_vram_gb": 3.5,
+      "sheet_seconds": 900.0
+    },
+    "measured_at": "2026-09-30T19:01:09.523113+00:00",
+    "p95_ms": 195.7,
+    "passed": true,
+    "peak_vram_gb": 2.846,
+    "sheet_rows_timed": 500,
+    "sheet_seconds": 280.3,
+    "sheet_seconds_batched": 135.5
+  },
+  "locked_split_reads": 0,
+  "model_id": "deberta-v3-large-lora-authorship-4d"
+}

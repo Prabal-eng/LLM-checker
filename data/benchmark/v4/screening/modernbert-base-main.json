@@ -1,0 +1,49 @@
+{
+  "bands": {
+    "100-199": {
+      "ais": 3869,
+      "auroc": 0.9839,
+      "humans": 1983,
+      "tpr_at_1pct_fpr": 0.8077
+    },
+    "200+": {
+      "ais": 1985,
+      "auroc": 0.954,
+      "humans": 1963,
+      "tpr_at_1pct_fpr": 0.4736
+    },
+    "25-49": {
+      "ais": 884,
+      "auroc": 0.7315,
+      "humans": 908,
+      "tpr_at_1pct_fpr": 0.0905
+    },
+    "50-99": {
+      "ais": 842,
+      "auroc": 0.8765,
+      "humans": 1026,
+      "tpr_at_1pct_fpr": 0.2553
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T05:53:36.954907+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 256,
+  "name": "modernbert-base",
+  "peak_train_vram_gb": 1.99,
+  "score_ms_per_text": 7.85,
+  "settings": {
+    "gradient_checkpointing": true,
+    "lr": 3e-05,
+    "model_name": "answerdotai/ModernBERT-base",
+    "optimizer": "adamw8bit"
+  },
+  "track": "main",
+  "train_rows": 24000,
+  "train_seconds": 898.2,
+  "validation": {
+    "auroc": 0.9467,
+    "tpr_at_1pct_fpr": 0.5551
+  },
+  "validation_rows": 13844
+}

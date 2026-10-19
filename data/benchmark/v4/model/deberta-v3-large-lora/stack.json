@@ -1,0 +1,38 @@
+{
+  "adopted": false,
+  "decision": "not adopted: the stack cannot meet the pre-registered GPU limits; the gain was not measured (user decision 2026-09-30, Amendment 14)",
+  "gpu_limits_basis": {
+    "peak_vram_limit_gb": 3.5,
+    "sheet_limit_seconds": 120,
+    "sheet_seconds_estimate_zero_shot_alone": 798,
+    "weights_fp16_gb": {
+      "Qwen2.5-0.5B observer": 0.99,
+      "Qwen2.5-0.5B-Instruct performer": 0.99,
+      "deberta-v3-large main": 0.87,
+      "deberta-v3-large short": 0.87
+    },
+    "weights_total_gb": 3.72,
+    "zero_shot_pair_rate_source": "Increment 3 bake-off on this GPU: 9,807 validation texts in 43.5 min (D:/llm-authorship-corpus/bakeoff-gpu.log)",
+    "zero_shot_pair_texts_per_second": 3.76
+  },
+  "locked_split_reads": 0,
+  "measured": false,
+  "recorded_at": "2026-09-30T17:56:53.662269+00:00",
+  "runs": [
+    {
+      "ended": "unclean shutdown 16:37 (Kernel-Power 41, no bug check)",
+      "started": "2026-09-30T16:15",
+      "written": false
+    },
+    {
+      "ended": "stopped 21:05: 1.64 GB spilled to shared GPU memory (classifiers and the pair loaded together); fixed in 5d96ae3",
+      "started": "2026-09-30T20:12",
+      "written": false
+    },
+    {
+      "ended": "unclean shutdown 22:36 during the zero-shot pair's scoring (1.13 GB shared memory, GPU 86 C)",
+      "started": "2026-09-30T21:05",
+      "written": false
+    }
+  ]
+}

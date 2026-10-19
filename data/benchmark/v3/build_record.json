@@ -1,0 +1,1056 @@
+{
+  "audit": {
+    "errors": [],
+    "passed": true,
+    "slices": [
+      {
+        "domain": "gempix_rationale",
+        "human": 3342,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "legacy_inhouse",
+        "split": "inhouse"
+      },
+      {
+        "domain": "personality_rationale",
+        "human": 428,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "legacy_inhouse",
+        "split": "inhouse"
+      },
+      {
+        "domain": "college_essay",
+        "human": 70,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "course_abstract",
+        "human": 145,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "student_essay",
+        "human": 88,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "toefl_essay",
+        "human": 90,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "detector_bias",
+        "split": "stress"
+      },
+      {
+        "domain": "aita",
+        "human": 854,
+        "meets_mvt": true,
+        "meets_target": true,
+        "source": "aita2026",
+        "split": "test"
+      },
+      {
+        "domain": "finance",
+        "human": 299,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "medicine",
+        "human": 130,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "open_qa",
+        "human": 133,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "reddit_eli5",
+        "human": 306,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "wiki_csai",
+        "human": 69,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "hc3",
+        "split": "test"
+      },
+      {
+        "domain": "cmv",
+        "human": 270,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "cnn",
+        "human": 19,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "dialogsum",
+        "human": 9,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "eli5",
+        "human": 288,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "hswag",
+        "human": 306,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "imdb",
+        "human": 16,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "pubmed",
+        "human": 25,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "roct",
+        "human": 313,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "sci_gen",
+        "human": 294,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "squad",
+        "human": 311,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "tldr",
+        "human": 292,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "wp",
+        "human": 299,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "xsum",
+        "human": 307,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "yelp",
+        "human": 326,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "mage",
+        "split": "test"
+      },
+      {
+        "domain": "academic",
+        "human": 265,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "comment",
+        "human": 232,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "news",
+        "human": 275,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "website",
+        "human": 272,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "mirage",
+        "split": "test"
+      },
+      {
+        "domain": "brainstorm",
+        "human": 158,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "chat",
+        "human": 165,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "classify",
+        "human": 107,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "closed_qa",
+        "human": 14,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "coding",
+        "human": 92,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "extract",
+        "human": 68,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "generation",
+        "human": 179,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "open_qa",
+        "human": 174,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "rewrite",
+        "human": 36,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "summarize",
+        "human": 10,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "no_robots",
+        "split": "test"
+      },
+      {
+        "domain": "assistant_reply",
+        "human": 188,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "oasst1",
+        "split": "test"
+      },
+      {
+        "domain": "abstracts",
+        "human": 149,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "books",
+        "human": 173,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "news",
+        "human": 165,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "poetry",
+        "human": 166,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "recipes",
+        "human": 168,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "reddit",
+        "human": 176,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "reviews",
+        "human": 77,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "wiki",
+        "human": 171,
+        "meets_mvt": false,
+        "meets_target": false,
+        "source": "raid",
+        "split": "test"
+      },
+      {
+        "domain": "cooking",
+        "human": 374,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "fitness",
+        "human": 370,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "gardening",
+        "human": 370,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "interpersonal",
+        "human": 373,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "money",
+        "human": 371,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "outdoors",
+        "human": 373,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "parenting",
+        "human": 375,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      },
+      {
+        "domain": "pets",
+        "human": 367,
+        "meets_mvt": true,
+        "meets_target": false,
+        "source": "stackexchange",
+        "split": "test"
+      }
+    ],
+    "warnings": [
+      "36 test slices have fewer than 300 human samples"
+    ]
+  },
+  "built_at": "2026-09-28T00:41:41.190015+00:00",
+  "cap_per_stratum": 3000,
+  "counts": {
+    "split_generator_family": {
+      "diagnostic|alibaba": 5071,
+      "diagnostic|deepseek": 5265,
+      "diagnostic|google": 5071,
+      "diagnostic|moonshot": 4877,
+      "diagnostic|openai": 5064,
+      "diagnostic|other:template": 443,
+      "diagnostic|other:unknown": 51,
+      "stress|alibaba": 4747,
+      "stress|anthropic": 4798,
+      "stress|bytedance": 2185,
+      "stress|cohere": 2,
+      "stress|deepseek": 9612,
+      "stress|google": 4992,
+      "stress|meta": 2013,
+      "stress|mistral": 4,
+      "stress|moonshot": 2482,
+      "stress|mosaicml": 5,
+      "stress|openai": 7796,
+      "stress|xai": 2509,
+      "test_unseen_generator|bigscience": 225,
+      "test_unseen_generator|cohere": 423,
+      "test_unseen_generator|ibm": 197,
+      "test_unseen_generator|microsoft": 167,
+      "test_unseen_generator|moonshot": 499,
+      "test|alibaba": 1232,
+      "test|anthropic": 851,
+      "test|bytedance": 461,
+      "test|deepseek": 1784,
+      "test|eleutherai": 77,
+      "test|google": 1464,
+      "test|meta": 1527,
+      "test|mistral": 577,
+      "test|mosaicml": 411,
+      "test|nvidia": 143,
+      "test|openai": 3984,
+      "test|xai": 545,
+      "test|zhipu": 163,
+      "train|alibaba": 2840,
+      "train|anthropic": 2157,
+      "train|bytedance": 1030,
+      "train|deepseek": 4141,
+      "train|eleutherai": 1258,
+      "train|google": 7047,
+      "train|meta": 13797,
+      "train|mistral": 3712,
+      "train|mosaicml": 2643,
+      "train|nvidia": 212,
+      "train|openai": 22828,
+      "train|xai": 1322,
+      "train|zhipu": 996,
+      "val|alibaba": 727,
+      "val|anthropic": 571,
+      "val|bytedance": 301,
+      "val|deepseek": 1057,
+      "val|eleutherai": 249,
+      "val|google": 1666,
+      "val|meta": 3103,
+      "val|mistral": 909,
+      "val|mosaicml": 610,
+      "val|nvidia": 59,
+      "val|openai": 5022,
+      "val|xai": 344,
+      "val|zhipu": 244
+    },
+    "split_label": {
+      "diagnostic|ai": 25842,
+      "diagnostic|human": 21857,
+      "inhouse|human": 3770,
+      "stress|ai": 41145,
+      "stress|human": 393,
+      "test_unseen_generator|ai": 1511,
+      "test|ai": 13219,
+      "test|human": 11319,
+      "train|ai": 63983,
+      "train|human": 51103,
+      "val|ai": 14862,
+      "val|human": 11333
+    },
+    "split_licence_class": {
+      "diagnostic|copyleft": 7005,
+      "diagnostic|internal": 494,
+      "diagnostic|permissive": 14852,
+      "diagnostic|unknown": 25348,
+      "inhouse|internal": 3770,
+      "stress|non_commercial": 40949,
+      "stress|permissive": 17,
+      "stress|unknown": 572,
+      "test_unseen_generator|non_commercial": 499,
+      "test_unseen_generator|permissive": 1012,
+      "test|copyleft": 5060,
+      "test|non_commercial": 8944,
+      "test|permissive": 9200,
+      "test|unknown": 1334,
+      "train|copyleft": 18153,
+      "train|non_commercial": 20930,
+      "train|permissive": 73090,
+      "train|unknown": 2913,
+      "val|copyleft": 3789,
+      "val|non_commercial": 5584,
+      "val|permissive": 16120,
+      "val|unknown": 702
+    },
+    "split_source": {
+      "diagnostic|legacy_inhouse": 494,
+      "diagnostic|rasbt50k": 47205,
+      "inhouse|legacy_inhouse": 3770,
+      "stress|detector_bias": 572,
+      "stress|mirage": 40949,
+      "stress|raid": 17,
+      "test_unseen_generator|mage": 225,
+      "test_unseen_generator|mirage": 499,
+      "test_unseen_generator|raid": 423,
+      "test_unseen_generator|stackexchange": 364,
+      "test|aita2026": 1708,
+      "test|hc3": 2087,
+      "test|mage": 4728,
+      "test|mirage": 7941,
+      "test|no_robots": 1003,
+      "test|oasst1": 268,
+      "test|raid": 3006,
+      "test|stackexchange": 3797,
+      "train|aita2026": 3250,
+      "train|beemo": 3638,
+      "train|dolly": 4571,
+      "train|hc3": 14855,
+      "train|mage": 44151,
+      "train|mirage": 18965,
+      "train|no_robots": 1965,
+      "train|oasst1": 3462,
+      "train|raid": 20229,
+      "val|aita2026": 842,
+      "val|beemo": 727,
+      "val|dolly": 987,
+      "val|hc3": 3090,
+      "val|mage": 9758,
+      "val|mirage": 5045,
+      "val|no_robots": 539,
+      "val|oasst1": 764,
+      "val|raid": 4443
+    },
+    "stress_transform_label": {
+      "attack:alternative_spelling|ai": 1,
+      "attack:article_deletion|ai": 3,
+      "attack:homoglyph|ai": 2,
+      "attack:insert_paragraphs|ai": 1,
+      "attack:number|ai": 1,
+      "attack:perplexity_misspelling|ai": 1,
+      "attack:synonym|ai": 4,
+      "attack:upper_lower|ai": 1,
+      "attack:whitespace|ai": 1,
+      "attack:zero_width_space|ai": 2,
+      "llm_polish|ai": 19819,
+      "llm_rewrite|ai": 21221,
+      "llm_simplify|ai": 88,
+      "none|human": 393
+    }
+  },
+  "duplicates": {
+    "exact_duplicates_dropped": 5569,
+    "label_conflicts_dropped": 20
+  },
+  "excluded_holdout_from_fit": 81540,
+  "holdout_families": [
+    "bigscience",
+    "cohere",
+    "ibm",
+    "microsoft",
+    "moonshot"
+  ],
+  "holdout_sources": [
+    "stackexchange"
+  ],
+  "redactions": {
+    "CARD": 536,
+    "EMAIL": 1569,
+    "IP": 191,
+    "PHONE": 971
+  },
+  "retired_rows_present": 49029,
+  "retired_test_ids": 68091,
+  "shortcut_probe": {
+    "evaluated_on": "val",
+    "features": [
+      "log_chars",
+      "log_words",
+      "mean_word_len",
+      "newline_rate",
+      "upper_ratio",
+      "digit_ratio",
+      "punct_ratio",
+      "non_ascii_ratio",
+      "starts_lower",
+      "no_terminal_punct",
+      "placeholders",
+      "has_line_break",
+      "has_blank_line",
+      "log_line_breaks",
+      "asterisks",
+      "backticks",
+      "spaced_dashes",
+      "inline_numbered",
+      "bullets"
+    ],
+    "flagged_sources": [],
+    "overall_auc": 0.6815,
+    "per_source_auc": {
+      "aita2026": 0.5597,
+      "beemo": 0.6125,
+      "dolly": 0.6247,
+      "hc3": 0.7249,
+      "mage": 0.58,
+      "mirage": 0.7666,
+      "oasst1": 0.6306,
+      "raid": 0.6189
+    },
+    "per_source_own_probe_auc": {
+      "aita2026": 0.7613,
+      "beemo": 0.6648,
+      "dolly": 0.8383,
+      "hc3": 0.8239,
+      "mage": 0.6441,
+      "mirage": 0.8393,
+      "oasst1": 0.7618,
+      "raid": 0.7457
+    },
+    "raw_text_reference": {
+      "overall_auc": 0.7355,
+      "per_source_auc": {
+        "aita2026": 0.5452,
+        "beemo": 0.66,
+        "dolly": 0.71,
+        "hc3": 0.7886,
+        "mage": 0.5793,
+        "mirage": 0.768,
+        "oasst1": 0.6125,
+        "raid": 0.9045
+      }
+    },
+    "status": "ok",
+    "text_view": "format2+typography+collapse_whitespace",
+    "train_ai_share_by_source": {
+      "aita2026": 0.5,
+      "beemo": 0.5008,
+      "dolly": 0.2785,
+      "hc3": 0.549,
+      "mage": 0.4862,
+      "mirage": 0.8676,
+      "no_robots": 0.0,
+      "oasst1": 0.3339,
+      "raid": 0.5948
+    },
+    "warn_threshold": 0.85
+  },
+  "source_test_share": {
+    "aita2026": 0.35,
+    "mirage": 0.35,
+    "no_robots": 0.35
+  },
+  "sources": [
+    {
+      "files": [
+        {
+          "path": "train.csv",
+          "sha256": "07b95008964d6be412aa764aa1e515d652c345305cebc522a7612c6015ba373a",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/train.csv"
+        },
+        {
+          "path": "valid.csv",
+          "sha256": "005e200957a4da551c8ac37079f43811db9c32f5141e3bdabb1caa257588691f",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/valid.csv"
+        },
+        {
+          "path": "test.csv",
+          "sha256": "dcb8a8a8de1459d382ac2da5e0f1c39452e8bc47d186d7393f3ed4308f762ac7",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test.csv"
+        },
+        {
+          "path": "test_ood_set_gpt.csv",
+          "sha256": "b9fe1faaa45fbbad446f527da12d42e3e9e3bbd207f7ea054e81ec8e922016d2",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test_ood_set_gpt.csv"
+        },
+        {
+          "path": "test_ood_set_gpt_para.csv",
+          "sha256": "a587909d155447ea2768cbd8f695a7febb65cdd7414da5c3b5ff6d6397463725",
+          "url": "https://huggingface.co/datasets/yaful/MAGE/resolve/main/test_ood_set_gpt_para.csv"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 61562,
+      "name": "mage"
+    },
+    {
+      "files": [
+        {
+          "path": "finance.jsonl",
+          "sha256": "72e3a439714c4693e115f8ad0b917988688abc07acba8de812198cb13cd5d72e",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/finance.jsonl"
+        },
+        {
+          "path": "medicine.jsonl",
+          "sha256": "7141b0f5b3477543e95e24a2b268f46c375b08703a390e9a04ff69f5193caa28",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/medicine.jsonl"
+        },
+        {
+          "path": "open_qa.jsonl",
+          "sha256": "4d968e1e1473cbdf5978024872768f0c6f27dacf681f35166dc191733dccd664",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/open_qa.jsonl"
+        },
+        {
+          "path": "reddit_eli5.jsonl",
+          "sha256": "448cebaf7fdf27560daf6cc87cc1464be4988cf8110c0ec40c40b21c2c0193db",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/reddit_eli5.jsonl"
+        },
+        {
+          "path": "wiki_csai.jsonl",
+          "sha256": "4f78105c72e7edd3b619b3b44abac1e6f8bdb42211f22e43191d4dae889e1968",
+          "url": "https://huggingface.co/datasets/Hello-SimpleAI/HC3/resolve/main/wiki_csai.jsonl"
+        }
+      ],
+      "licence": "CC-BY-SA-4.0",
+      "licence_class": "copyleft",
+      "loaded": 20442,
+      "name": "hc3"
+    },
+    {
+      "files": [
+        {
+          "path": "train.csv",
+          "sha256": "52f04ceebc126064e68fbd22d8b736964065745464f4bfd52e488150b49f84e4",
+          "url": "https://huggingface.co/datasets/liamdugan/raid/resolve/main/train.csv"
+        }
+      ],
+      "licence": "MIT",
+      "licence_class": "permissive",
+      "loaded": 70307,
+      "name": "raid"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "5df88f7941e873db3c6e2be4e4085db50fa824f7fc626685f0e317e935a188db",
+          "url": "https://huggingface.co/datasets/toloka/beemo/resolve/main/data/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "MIT",
+      "licence_class": "permissive",
+      "loaded": 19683,
+      "name": "beemo"
+    },
+    {
+      "files": [
+        {
+          "path": "DIG/generate.json",
+          "sha256": "4e835ba766ea8249013794625e098f4d30ece7cdd93518ca8ded4b7a6bad82c8",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/generate.json"
+        },
+        {
+          "path": "DIG/polish.json",
+          "sha256": "cc941cb996a1beff5649aeb33bba670235efffebe646779975cb6796dad2e818",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/polish.json"
+        },
+        {
+          "path": "DIG/rewrite.json",
+          "sha256": "c78ca21d14e21721ec3b0974a603b994d73e81692a27b2c504dac07542ac4526",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/DIG/rewrite.json"
+        },
+        {
+          "path": "SIG/generate.json",
+          "sha256": "60ceb27f72019b8081d3e4fbe329b218b395331dd6cf4c1e7d2ed3ce5ba7b7a3",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/generate.json"
+        },
+        {
+          "path": "SIG/polish.json",
+          "sha256": "d1107a8d78308ae52aa5f465f585ac5edac1e78a99177d3b5b4f6823869b978b",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/polish.json"
+        },
+        {
+          "path": "SIG/rewrite.json",
+          "sha256": "a45c2f15c740afc5b96edf027a9b814901de32188e3f06ee3ea4606ac6456e2f",
+          "url": "https://raw.githubusercontent.com/fjc2005/DetectAnyLLM/main/data/MIRAGE_BENCH/SIG/rewrite.json"
+        }
+      ],
+      "licence": "Pi-Lab-1.0",
+      "licence_class": "non_commercial",
+      "loaded": 96594,
+      "name": "mirage"
+    },
+    {
+      "files": [
+        {
+          "path": "TOEFL_real_91.json",
+          "sha256": "d5e2bf0bd4831262d60aa936b2ac8e532bd3859067411288b6c22ed16867666b",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/TOEFL_real_91/data.json"
+        },
+        {
+          "path": "HewlettStudentEssay_real_88.json",
+          "sha256": "6145e4e8bf36b780624626b31a783d7ca97696e1e14ae6d13c083b79da2f042d",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/HewlettStudentEssay_real_88/data.json"
+        },
+        {
+          "path": "CollegeEssay_real_70.json",
+          "sha256": "37534035e5ad8bbb7a362433644b38c6b8d45ad9c444836cc89a7013eb0d9917",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/CollegeEssay_real_70/data.json"
+        },
+        {
+          "path": "CS224N_real_145.json",
+          "sha256": "fa62fd0355b7121283feb3ee4468bd0db23ba7847806a04d4a754f77b723a31d",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/CS224N_real_145/data.json"
+        },
+        {
+          "path": "TOEFL_gpt4polished_91.json",
+          "sha256": "8dcbce862bc54259666c77d68ed43927af9d4cfd350c57ff1b250c21860256c6",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/TOEFL_gpt4polished_91/data.json"
+        },
+        {
+          "path": "HewlettStudentEssay_GPTsimplify_88.json",
+          "sha256": "59fef9d557c689f1a508269b780f37bab548346d5033c455c3e211a99c1feba3",
+          "url": "https://raw.githubusercontent.com/Weixin-Liang/ChatGPT-Detector-Bias/main/Data_and_Results/Human_Data/HewlettStudentEssay_GPTsimplify_88/data.json"
+        }
+      ],
+      "licence": "other-open (Zenodo 10.5281/zenodo.7893958)",
+      "licence_class": "unknown",
+      "loaded": 573,
+      "name": "detector_bias"
+    },
+    {
+      "files": [],
+      "licence": "internal",
+      "licence_class": "internal",
+      "loaded": 7544,
+      "name": "legacy_inhouse"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "9cc863804d42e473832c2dd485a6551aa92f33c1223aa1a5c83ccfd1d412cf45",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "validation-00000-of-00001.parquet",
+          "sha256": "dfb499b211b3125aea56c868f6d991316733b43c4a0de0bddbc33f466f42f6a9",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/validation-00000-of-00001.parquet"
+        },
+        {
+          "path": "test-00000-of-00001.parquet",
+          "sha256": "8444233e096d3b8636bf911ca0175d07c6951775ba41472cbc6f88500e4c7ac7",
+          "url": "https://huggingface.co/datasets/rasbt/human-vs-ai-50k/resolve/main/data/test-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "per-row source licence (CC0, CC BY, CC BY-SA, public domain)",
+      "licence_class": "copyleft",
+      "loaded": 47205,
+      "name": "rasbt50k"
+    },
+    {
+      "files": [
+        {
+          "path": "dataset.jsonl",
+          "sha256": "1141db8f318e1f1525f16a7f01218a081e847d12cbc07238f93294dfc4ca017e",
+          "url": "https://huggingface.co/datasets/mild-rgb/aita-human-vs-ai/resolve/main/dataset.jsonl"
+        },
+        {
+          "path": "anecdotes.tar.gz",
+          "sha256": "0d7872b802dcf6f7982dd308caa2d247f4d144739350ac606f77730e07c4d2b3",
+          "url": "https://storage.googleapis.com/ai2-mosaic-public/projects/scruples/v1.0/data/anecdotes.tar.gz"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 5800,
+      "name": "aita2026"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001.parquet",
+          "sha256": "76d64120a2ab20eb85d6b22bdced5b1ec638a6213a97004741006745c92489ef",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/no_robots/resolve/main/data/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "test-00000-of-00001.parquet",
+          "sha256": "60707b2636a46e37bb0c1e9ca263a18553f430317b7a53c691676d6a492fc0f2",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/no_robots/resolve/main/data/test-00000-of-00001.parquet"
+        },
+        {
+          "path": "beemo.parquet",
+          "sha256": "5df88f7941e873db3c6e2be4e4085db50fa824f7fc626685f0e317e935a188db",
+          "url": "https://huggingface.co/datasets/toloka/beemo/resolve/main/data/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "CC-BY-NC-4.0",
+      "licence_class": "non_commercial",
+      "loaded": 3511,
+      "name": "no_robots"
+    },
+    {
+      "files": [
+        {
+          "path": "databricks-dolly-15k.jsonl",
+          "sha256": "2df9083338b4abd6bceb5635764dab5d833b393b55759dffb0959b6fcbf794ec",
+          "url": "https://huggingface.co/datasets/databricks/databricks-dolly-15k/resolve/main/databricks-dolly-15k.jsonl"
+        }
+      ],
+      "licence": "CC-BY-SA-3.0",
+      "licence_class": "copyleft",
+      "loaded": 5562,
+      "name": "dolly"
+    },
+    {
+      "files": [
+        {
+          "path": "train-00000-of-00001-b42a775f407cee45.parquet",
+          "sha256": "bbfadf5ed1278ba2208c837fdcad865adf65f5df55d80abadab2745db13fcb5e",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/main/data/train-00000-of-00001-b42a775f407cee45.parquet"
+        },
+        {
+          "path": "validation-00000-of-00001-134b8fd0c89408b6.parquet",
+          "sha256": "24002597bb13a7edd42d92f773762f25e285f72c31a70449393d0ded1dc7b416",
+          "url": "https://huggingface.co/datasets/OpenAssistant/oasst1/resolve/main/data/validation-00000-of-00001-134b8fd0c89408b6.parquet"
+        }
+      ],
+      "licence": "Apache-2.0",
+      "licence_class": "permissive",
+      "loaded": 4494,
+      "name": "oasst1"
+    },
+    {
+      "files": [
+        {
+          "path": "cooking.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "92f037fb6ff4c75c216540959179b4680cfb719baeabd24108acbe469ee3308a",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/cooking.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "gardening.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "4418b1ec61bd412637334b25142cf90f453834b7fe36d8df6c76490ac83d581c",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/gardening.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "money.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "3da6f52cac1b08173f04cf66b65bc83209070a9c3fad476ccc9ce0b2d27bd9e9",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/money.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "parenting.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "d2578155daf8ce02fadfbed82b9facd5e6f745b13463e4b0296d628131bd57a6",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/parenting.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "pets.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "2cca1756b4e60875a8f5d4635863342dbf88c02fe72a1058efbb4b19db0a53e6",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/pets.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "outdoors.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "6dcbf78baa3dbb90f9088b1b24de03e2e8c2ebdb87ff4a8934ea536c7c786a7d",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/outdoors.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "fitness.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "3d457225de5a52030f285d10a62a23cf34d66f07cedafc55dc4fc952f6a36daf",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/fitness.stackexchange.com/train-00000-of-00001.parquet"
+        },
+        {
+          "path": "interpersonal.stackexchange.com/train-00000-of-00001.parquet",
+          "sha256": "890466703d2a46c1f9b372b8440d9c8dc6b944a3afa0ab8e4224e69055f83b95",
+          "url": "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences/resolve/main/data/interpersonal.stackexchange.com/train-00000-of-00001.parquet"
+        }
+      ],
+      "licence": "CC-BY-SA-4.0",
+      "licence_class": "copyleft",
+      "loaded": 4189,
+      "name": "stackexchange"
+    }
+  ],
+  "split_salt": "v3",
+  "stress_follows_parent": [
+    "beemo"
+  ],
+  "test_lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+  "total": 260337,
+  "version": "v3"
+}

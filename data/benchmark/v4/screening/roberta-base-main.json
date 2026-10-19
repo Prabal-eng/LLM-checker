@@ -1,0 +1,48 @@
+{
+  "bands": {
+    "100-199": {
+      "ais": 3869,
+      "auroc": 0.9802,
+      "humans": 1983,
+      "tpr_at_1pct_fpr": 0.7185
+    },
+    "200+": {
+      "ais": 1985,
+      "auroc": 0.9354,
+      "humans": 1963,
+      "tpr_at_1pct_fpr": 0.2353
+    },
+    "25-49": {
+      "ais": 884,
+      "auroc": 0.7597,
+      "humans": 908,
+      "tpr_at_1pct_fpr": 0.0894
+    },
+    "50-99": {
+      "ais": 842,
+      "auroc": 0.879,
+      "humans": 1026,
+      "tpr_at_1pct_fpr": 0.1853
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T05:36:49.808600+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 256,
+  "name": "roberta-base",
+  "peak_train_vram_gb": 2.55,
+  "score_ms_per_text": 4.19,
+  "settings": {
+    "gradient_checkpointing": true,
+    "lr": 2e-05,
+    "model_name": "FacebookAI/roberta-base"
+  },
+  "track": "main",
+  "train_rows": 24000,
+  "train_seconds": 549.3,
+  "validation": {
+    "auroc": 0.9237,
+    "tpr_at_1pct_fpr": 0.4653
+  },
+  "validation_rows": 13844
+}

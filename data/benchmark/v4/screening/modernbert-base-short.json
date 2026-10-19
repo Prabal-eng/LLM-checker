@@ -1,0 +1,37 @@
+{
+  "bands": {
+    "25-49": {
+      "ais": 2087,
+      "auroc": 0.7804,
+      "humans": 1708,
+      "tpr_at_1pct_fpr": 0.2492
+    },
+    "50-99": {
+      "ais": 5486,
+      "auroc": 0.9258,
+      "humans": 4155,
+      "tpr_at_1pct_fpr": 0.4192
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T08:08:31.206195+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 160,
+  "name": "modernbert-base",
+  "peak_train_vram_gb": 1.91,
+  "score_ms_per_text": 4.41,
+  "settings": {
+    "gradient_checkpointing": true,
+    "lr": 3e-05,
+    "model_name": "answerdotai/ModernBERT-base",
+    "optimizer": "adamw8bit"
+  },
+  "track": "short",
+  "train_rows": 24000,
+  "train_seconds": 622.9,
+  "validation": {
+    "auroc": 0.8935,
+    "tpr_at_1pct_fpr": 0.3634
+  },
+  "validation_rows": 13436
+}

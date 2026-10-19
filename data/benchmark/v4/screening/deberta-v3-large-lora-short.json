@@ -1,0 +1,42 @@
+{
+  "bands": {
+    "25-49": {
+      "ais": 2087,
+      "auroc": 0.889,
+      "humans": 1708,
+      "tpr_at_1pct_fpr": 0.3555
+    },
+    "50-99": {
+      "ais": 5486,
+      "auroc": 0.9604,
+      "humans": 4155,
+      "tpr_at_1pct_fpr": 0.529
+    }
+  },
+  "corpus_version": "v3",
+  "finished_at": "2026-09-28T09:14:05.776077+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 160,
+  "name": "deberta-v3-large-lora",
+  "peak_train_vram_gb": 2.26,
+  "score_ms_per_text": 15.09,
+  "settings": {
+    "gradient_checkpointing": true,
+    "lora": {
+      "alpha": 32,
+      "r": 16
+    },
+    "lr": 0.0002,
+    "model_name": "microsoft/deberta-v3-large",
+    "precision": "fp16",
+    "score_batch_size": 16
+  },
+  "track": "short",
+  "train_rows": 24000,
+  "train_seconds": 1669.7,
+  "validation": {
+    "auroc": 0.9417,
+    "tpr_at_1pct_fpr": 0.484
+  },
+  "validation_rows": 13436
+}

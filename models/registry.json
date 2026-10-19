@@ -1,0 +1,473 @@
+{
+  "artifact": {
+    "files_sha256": "36279de70d4e94946c3a031427672a982d861821e60bf30790cb9b27bfb7d5a4",
+    "relative_path": "models/deberta-v3-large-lora-authorship-4d/merged-0.1",
+    "sha256": "f2a9396eacc8942d0b136356fdd84228c958c4c77499f15b84327ea476cd10fe"
+  },
+  "benchmark": {
+    "failures": [
+      "no_robots: false-AI upper bound 0.0189 > 0.01",
+      "wasitai2026: false-human upper bound 0.1973 > 0.1",
+      "outcome close_gate: improvement rule failed (gain 12.9 points, losing ['hc3', 'mage']), today's models failed"
+    ],
+    "history": [
+      {
+        "model_id": "deberta-v3-large-lora-authorship-4d",
+        "outcome": "close_gate",
+        "passed": false,
+        "ran_at": "2026-09-30T21:59:57.806634+00:00",
+        "rerun_reason": null
+      }
+    ],
+    "passed": false,
+    "ran_at": "2026-09-30T21:59:57.806634+00:00",
+    "record_sha256": "3148fdcc29c3b9e93373070fbc9bec7b8ed1f219e9bdef8fd771cb7369baf9f9",
+    "report": "data/benchmark/v4/model/head_to_head.json",
+    "report_sha256": "4717c387a7b9cbf24d19746ed7b4ce48ead440d0db1c1ea093d48d9de691bec2"
+  },
+  "calibration": {
+    "bands": [
+      {
+        "ai_min": 0.9878361149975348,
+        "false_ai_slices": [
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "arena140k",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.07042106546568862,
+        "lower_words": 25,
+        "model": "short",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "beemo",
+          "no_robots"
+        ],
+        "upper_words": 50
+      },
+      {
+        "ai_min": 0.990838004798903,
+        "false_ai_slices": [
+          "aita2026",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid",
+          "stackexchange"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.07783391256752986,
+        "lower_words": 50,
+        "model": "short",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "no_robots"
+        ],
+        "upper_words": 100
+      },
+      {
+        "ai_min": 0.9406049559717946,
+        "false_ai_slices": [
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.13905732192578676,
+        "lower_words": 100,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "dolly",
+          "no_robots",
+          "oasst1",
+          "openturingbench"
+        ],
+        "upper_words": 200
+      },
+      {
+        "ai_min": 0.9601114962899469,
+        "false_ai_slices": [
+          "aita2026",
+          "dactyl",
+          "maga",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.40875715872777285,
+        "lower_words": 200,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": null
+      }
+    ],
+    "main_bands": [
+      {
+        "ai_min": 0.9650414418446986,
+        "false_ai_slices": [
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "arena140k",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.059898366244382245,
+        "lower_words": 25,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "beemo",
+          "no_robots"
+        ],
+        "upper_words": 50
+      },
+      {
+        "ai_min": 0.9825922322838184,
+        "false_ai_slices": [
+          "aita2026",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid",
+          "stackexchange"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "dolly",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "oasst1",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.1368561277388152,
+        "lower_words": 50,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "no_robots"
+        ],
+        "upper_words": 100
+      },
+      {
+        "ai_min": 0.9406049559717946,
+        "false_ai_slices": [
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.13905732192578676,
+        "lower_words": 100,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "dolly",
+          "no_robots",
+          "oasst1",
+          "openturingbench"
+        ],
+        "upper_words": 200
+      },
+      {
+        "ai_min": 0.9601114962899469,
+        "false_ai_slices": [
+          "aita2026",
+          "dactyl",
+          "maga",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "arena140k",
+          "beemo",
+          "dactyl",
+          "hc3",
+          "maga",
+          "mage",
+          "mirage",
+          "openturingbench",
+          "raid",
+          "stackexchange"
+        ],
+        "human_max": 0.40875715872777285,
+        "lower_words": 200,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": null
+      }
+    ],
+    "ood": {
+      "bank_relative_path": "models/deberta-v3-large-lora-authorship-4d/ood_bank.npy",
+      "bank_sha256": "7de84f6a863dcb81b0ed48b3b021d8b97556a8f0c58efb1ef7924b38c353a949",
+      "k": 10,
+      "threshold": 0.07531706333160396
+    },
+    "platt": [
+      0.9612026614815805,
+      -1.733938281528753
+    ],
+    "report": "data/benchmark/v4/model/deberta-v3-large-lora/calibration.json",
+    "targets": {
+      "max_false_ai_upper95": 0.008,
+      "max_false_human_upper95": 0.08
+    }
+  },
+  "corpus_version": "v4",
+  "locked_benchmark_history": [
+    {
+      "failures": [
+        "beemo: false-AI upper bound 0.4406 > 0.01"
+      ],
+      "model_id": "distilroberta-authorship-v1",
+      "passed": false,
+      "ran_at": "2026-09-26T17:28:01.958254+00:00"
+    },
+    {
+      "failures": [
+        "beemo: false-AI upper bound 0.1117 > 0.01",
+        "beemo: false-human upper bound 0.1085 > 0.1"
+      ],
+      "model_id": "distilroberta-authorship-v2",
+      "passed": false,
+      "ran_at": "2026-09-26T18:42:15.418227+00:00",
+      "rerun_reason": "v1 failed (Beemo false-AI 42%); diagnosis found a layout confound (public AI text keeps blank lines, human text does not). v2 retrains and scores on whitespace-collapsed text; no thresholds or criteria were tuned to the first run's results."
+    },
+    {
+      "corpus_version": "v2",
+      "failures": [
+        "aita2026: false-AI upper bound 0.0150 > 0.01",
+        "dolly: false-AI upper bound 0.0122 > 0.01",
+        "no_robots: false-AI upper bound 0.0145 > 0.01",
+        "oasst1: false-AI upper bound 0.2097 > 0.01"
+      ],
+      "lock_sha256": "76b3343356b0594a5212e409b791075969a539f3e3f72867d805cced42bee412",
+      "model_id": "distilroberta-authorship-v3",
+      "passed": false,
+      "ran_at": "2026-09-27T07:34:57.235585+00:00",
+      "rerun_reason": "first attempt (2026-09-27 12:47) was cut off by a system power loss at 28,000 of 121,034 texts; no result was written or viewed",
+      "short_model_id": "distilroberta-authorship-short-v1"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v4",
+      "passed": true,
+      "ran_at": "2026-09-27T22:19:13.314906+00:00",
+      "rerun_reason": null,
+      "short_model_id": "distilroberta-authorship-short-v2",
+      "started_at": "2026-09-27T22:03:10.142783+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T01:01:10.167812+00:00",
+      "rerun_reason": "Amendment 7 (Ralph R09-1): the first v3 run view kept list markers inside excerpts, which the short model learned; models retrained as v5 and short-v3 on the fixed format2 view and recalibrated; thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T00:44:50.986462+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T02:13:15.891809+00:00",
+      "rerun_reason": "Amendment 8 (Ralph R10-1): disguise handling let cheap character swaps turn Likely AI into Likely human; the service now closes disguise as a class and abstains on unreadable words; models, thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T01:56:12.700373+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T03:17:29.949068+00:00",
+      "rerun_reason": "Amendment 9 (Ralph R11-1): marks composing with letters, orphan marks, letter-shaped symbols and foreign digits slipped past disguise handling; accents are now read back and the service abstains only on dense unreadable text; models, thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T02:57:55.129007+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v4",
+      "failures": [
+        "no_robots: false-AI upper bound 0.0189 > 0.01",
+        "wasitai2026: false-human upper bound 0.1973 > 0.1",
+        "outcome close_gate: improvement rule failed (gain 12.9 points, losing ['hc3', 'mage']), today's models failed"
+      ],
+      "head_to_head": true,
+      "incumbent_model_id": "distilroberta-authorship-v5",
+      "lock_sha256": "549b3f1040890c881f898d819f6e8c637499884cbab36543edc0424ba46d2d24",
+      "model_id": "deberta-v3-large-lora-authorship-4d",
+      "outcome": "close_gate",
+      "passed": false,
+      "ran_at": "2026-09-30T21:59:57.806634+00:00",
+      "rerun_reason": null,
+      "short_model_id": "deberta-v3-large-lora-authorship-short-4d",
+      "started_at": "2026-09-30T19:12:34.454953+00:00",
+      "status": "finished"
+    }
+  ],
+  "max_tokens": 256,
+  "model_id": "deberta-v3-large-lora-authorship-4d",
+  "policy_version": "v2.2.0",
+  "precision": "fp16",
+  "scoring_code_sha256": "85b626e1b3ed87c560260c6b5b1568e6cf8b5e6e0337a1c576d13e9daf13a7a4",
+  "short_model": {
+    "artifact": {
+      "files_sha256": "6e18135f3ca4af01bf452778862dad6e51634c978d74f112ebdb062c8e0454e8",
+      "relative_path": "models/deberta-v3-large-lora-authorship-short-4d/merged-1.1",
+      "sha256": "b9455479b2556e6e2e948e8eeceb7805935d55f913093fbc6196f4d8e92dd2c7"
+    },
+    "max_tokens": 160,
+    "model_id": "deberta-v3-large-lora-authorship-short-4d",
+    "ood": {
+      "bank_relative_path": "models/deberta-v3-large-lora-authorship-short-4d/ood_bank.npy",
+      "bank_sha256": "c7682bd308662b9e84598591cba71b9887cce123e2557d83848fc07fc0a20cf7",
+      "k": 10,
+      "threshold": 0.10047477483749397
+    },
+    "platt": [
+      0.6917834632546839,
+      0.05583403279578539
+    ],
+    "precision": "fp16",
+    "ranges": [
+      [
+        25,
+        50
+      ],
+      [
+        50,
+        100
+      ]
+    ],
+    "training_record": "data/benchmark/v4/model/deberta-v3-large-lora/training_record_short.json"
+  },
+  "text_normalization": "format4+typography+collapse_whitespace",
+  "text_view_sha256": "d32c4612c2bbbf3b97e680670fda5c4dd48c19bb18989c0aa194239cc306238e",
+  "training_record": "data/benchmark/v4/model/deberta-v3-large-lora/training_record.json"
+}

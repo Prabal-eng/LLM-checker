@@ -1,0 +1,391 @@
+{
+  "artifact": {
+    "files_sha256": "93f5d6d62f347916944ec87a3afab13650bd50fa4af62916ac99524abd4dc18d",
+    "relative_path": "models/distilroberta-authorship-v5/epoch-0",
+    "sha256": "49f967ecf4208e07382cacd85b141fed21180f54c2e7b009feb1e760b38f460d"
+  },
+  "benchmark": {
+    "failures": [],
+    "history": [
+      {
+        "model_id": "distilroberta-authorship-v5",
+        "passed": true,
+        "ran_at": "2026-09-28T03:17:29.949068+00:00",
+        "rerun_reason": "Amendment 9 (Ralph R11-1): marks composing with letters, orphan marks, letter-shaped symbols and foreign digits slipped past disguise handling; accents are now read back and the service abstains only on dense unreadable text; models, thresholds, criteria and data unchanged"
+      }
+    ],
+    "passed": true,
+    "ran_at": "2026-09-28T03:17:29.949068+00:00",
+    "record_sha256": "d3120cf69aa687eeb4b0b5fcbe4db4f506f3e4e9d6e1b12b103321ade2e58383",
+    "report": "data/benchmark/v3/model/benchmark.json",
+    "report_sha256": "792b71bf5a72a338a45d122ffcc09cce3954a26b6962d3ff732f4cf5485d1110"
+  },
+  "calibration": {
+    "bands": [
+      {
+        "ai_min": 0.9174811916834388,
+        "false_ai_slices": [
+          "hc3",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.1298042001361185,
+        "lower_words": 25,
+        "model": "short",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "beemo",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": 50
+      },
+      {
+        "ai_min": 0.9840882814911709,
+        "false_ai_slices": [
+          "aita2026",
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "beemo",
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid"
+        ],
+        "human_max": 0.16923888297801284,
+        "lower_words": 50,
+        "model": "short",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "no_robots"
+        ],
+        "upper_words": 100
+      },
+      {
+        "ai_min": 0.9710300697288284,
+        "false_ai_slices": [
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "beemo",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.03444754722589099,
+        "lower_words": 100,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": 200
+      },
+      {
+        "ai_min": 0.9658659375060633,
+        "false_ai_slices": [
+          "aita2026",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "beemo",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.28321599508712414,
+        "lower_words": 200,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": null
+      }
+    ],
+    "main_bands": [
+      {
+        "ai_min": 0.9340809738328181,
+        "false_ai_slices": [
+          "hc3",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.10454875863143884,
+        "lower_words": 25,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "beemo",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": 50
+      },
+      {
+        "ai_min": 0.9791807574146048,
+        "false_ai_slices": [
+          "aita2026",
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "beemo",
+          "dolly",
+          "hc3",
+          "mage",
+          "mirage",
+          "oasst1",
+          "raid"
+        ],
+        "human_max": 0.07508274385729503,
+        "lower_words": 50,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "no_robots"
+        ],
+        "upper_words": 100
+      },
+      {
+        "ai_min": 0.9710300697288284,
+        "false_ai_slices": [
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "beemo",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.03444754722589099,
+        "lower_words": 100,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "aita2026",
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": 200
+      },
+      {
+        "ai_min": 0.9658659375060633,
+        "false_ai_slices": [
+          "aita2026",
+          "mage",
+          "raid"
+        ],
+        "false_human_slices": [
+          "aita2026",
+          "beemo",
+          "hc3",
+          "mage",
+          "mirage",
+          "raid"
+        ],
+        "human_max": 0.28321599508712414,
+        "lower_words": 200,
+        "model": "main",
+        "reason": "",
+        "supported": true,
+        "unverified_slices": [
+          "dolly",
+          "no_robots",
+          "oasst1"
+        ],
+        "upper_words": null
+      }
+    ],
+    "ood": {
+      "bank_relative_path": "models/distilroberta-authorship-v5/ood_bank.npy",
+      "bank_sha256": "d423b062de74741069e554a546e02ed9189714808035fcb00832450bda548a86",
+      "k": 10,
+      "threshold": 0.046864919066429096
+    },
+    "platt": [
+      0.903305456346197,
+      -1.0185423987257554
+    ],
+    "report": "data/benchmark/v3/model/calibration.json",
+    "targets": {
+      "max_false_ai_upper95": 0.008,
+      "max_false_human_upper95": 0.08
+    }
+  },
+  "corpus_version": "v3",
+  "locked_benchmark_history": [
+    {
+      "failures": [
+        "beemo: false-AI upper bound 0.4406 > 0.01"
+      ],
+      "model_id": "distilroberta-authorship-v1",
+      "passed": false,
+      "ran_at": "2026-09-26T17:28:01.958254+00:00"
+    },
+    {
+      "failures": [
+        "beemo: false-AI upper bound 0.1117 > 0.01",
+        "beemo: false-human upper bound 0.1085 > 0.1"
+      ],
+      "model_id": "distilroberta-authorship-v2",
+      "passed": false,
+      "ran_at": "2026-09-26T18:42:15.418227+00:00",
+      "rerun_reason": "v1 failed (Beemo false-AI 42%); diagnosis found a layout confound (public AI text keeps blank lines, human text does not). v2 retrains and scores on whitespace-collapsed text; no thresholds or criteria were tuned to the first run's results."
+    },
+    {
+      "corpus_version": "v2",
+      "failures": [
+        "aita2026: false-AI upper bound 0.0150 > 0.01",
+        "dolly: false-AI upper bound 0.0122 > 0.01",
+        "no_robots: false-AI upper bound 0.0145 > 0.01",
+        "oasst1: false-AI upper bound 0.2097 > 0.01"
+      ],
+      "lock_sha256": "76b3343356b0594a5212e409b791075969a539f3e3f72867d805cced42bee412",
+      "model_id": "distilroberta-authorship-v3",
+      "passed": false,
+      "ran_at": "2026-09-27T07:34:57.235585+00:00",
+      "rerun_reason": "first attempt (2026-09-27 12:47) was cut off by a system power loss at 28,000 of 121,034 texts; no result was written or viewed",
+      "short_model_id": "distilroberta-authorship-short-v1"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v4",
+      "passed": true,
+      "ran_at": "2026-09-27T22:19:13.314906+00:00",
+      "rerun_reason": null,
+      "short_model_id": "distilroberta-authorship-short-v2",
+      "started_at": "2026-09-27T22:03:10.142783+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T01:01:10.167812+00:00",
+      "rerun_reason": "Amendment 7 (Ralph R09-1): the first v3 run view kept list markers inside excerpts, which the short model learned; models retrained as v5 and short-v3 on the fixed format2 view and recalibrated; thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T00:44:50.986462+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T02:13:15.891809+00:00",
+      "rerun_reason": "Amendment 8 (Ralph R10-1): disguise handling let cheap character swaps turn Likely AI into Likely human; the service now closes disguise as a class and abstains on unreadable words; models, thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T01:56:12.700373+00:00",
+      "status": "finished"
+    },
+    {
+      "corpus_version": "v3",
+      "failures": [],
+      "lock_sha256": "15d9b9a4b5fcab1b9528af2fd927243392564d3f9eed46bf4b69d7f2f79c4349",
+      "model_id": "distilroberta-authorship-v5",
+      "passed": true,
+      "ran_at": "2026-09-28T03:17:29.949068+00:00",
+      "rerun_reason": "Amendment 9 (Ralph R11-1): marks composing with letters, orphan marks, letter-shaped symbols and foreign digits slipped past disguise handling; accents are now read back and the service abstains only on dense unreadable text; models, thresholds, criteria and data unchanged",
+      "short_model_id": "distilroberta-authorship-short-v3",
+      "started_at": "2026-09-28T02:57:55.129007+00:00",
+      "status": "finished"
+    }
+  ],
+  "max_tokens": 256,
+  "model_id": "distilroberta-authorship-v5",
+  "policy_version": "v2.2.0",
+  "scoring_code_sha256": "04e3d3540a44f8e44200634d279562e40d06542c4622025e843cc1a7b5a31263",
+  "short_model": {
+    "artifact": {
+      "files_sha256": "2168aaf46c3b1571ed1594ba096dc1f4d73f37862afa3d134498bb63c0ca8311",
+      "relative_path": "models/distilroberta-authorship-short-v3/epoch-0",
+      "sha256": "9e020e55c863cace262b0fc95751eecaa9f768b774f2eab849e12cd071ae25f8"
+    },
+    "max_tokens": 160,
+    "model_id": "distilroberta-authorship-short-v3",
+    "ood": {
+      "bank_relative_path": "models/distilroberta-authorship-short-v3/ood_bank.npy",
+      "bank_sha256": "28374ebaad504c1f37481984c32d21f28d14e651429330ee94434bd23788becc",
+      "k": 10,
+      "threshold": 0.04452260732650757
+    },
+    "platt": [
+      0.9849995628209428,
+      -0.9234630003661205
+    ],
+    "ranges": [
+      [
+        25,
+        50
+      ],
+      [
+        50,
+        100
+      ]
+    ],
+    "training_record": "data/benchmark/v3/model/training_record_short.json"
+  },
+  "text_normalization": "format2+typography+collapse_whitespace",
+  "text_view_sha256": "f3289b1f8878b99eae20375b518b4e5bb6986540e86268047f58918fcc2e8eaa",
+  "training_record": "data/benchmark/v3/model/training_record.json"
+}

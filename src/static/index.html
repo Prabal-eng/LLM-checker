@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel AI & Structural QA Pipeline</title>
+    <meta name="description" content="AI-generated text detection and structural QA auditing for evaluation spreadsheets.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-base: #0b0f19;
+            --bg-card: #151d2f;
+            --accent: #3b82f6;
+            --accent-hover: #2563eb;
+            --accent-glow: rgba(59, 130, 246, 0.25);
+            --border: #23304a;
+            --text-primary: #f8fafc;
+            --text-muted: #94a3b8;
+            --danger: #ef4444;
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem 1rem;
+        }
+        .container {
+            width: 100%;
+            max-width: 880px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
+        }
+        .dropzone {
+            border: 2px dashed var(--border);
+            border-radius: 12px;
+            padding: 3rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: rgba(15, 23, 42, 0.6);
+        }
+        .dropzone:hover, .dropzone.dragover {
+            border-color: var(--accent);
+            background: var(--accent-glow);
+        }
+        .dropzone p {
+            margin-top: 0.75rem;
+            color: var(--text-muted);
+        }
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .form-group {
+            flex: 1;
+        }
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        select, input[type="number"] {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: #0d1322;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        select {
+            color-scheme: dark;
+            appearance: none;
+            -webkit-appearance: none;
+            cursor: pointer;
+            text-overflow: ellipsis;
+            padding-right: 2.5rem;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+        }
+        select:hover { border-color: #33466b; }
+        select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+        select option { background: #0d1322; color: var(--text-primary); }
+        .locale-panel {
+            background: #0d1322;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+        .locale-item {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.55rem 1rem;
+            margin: 0;
+            font-weight: normal;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .locale-item:hover { background: rgba(255, 255, 255, 0.04); }
+        .locale-item input { width: 1.05rem; height: 1.05rem; accent-color: var(--accent); flex-shrink: 0; }
+        .locale-item .locale-meta { color: var(--text-muted); font-size: 0.8rem; margin-left: auto; text-align: right; }
+        .locale-item.locale-all { border-bottom: 1px solid var(--border); font-weight: 600; position: sticky; top: 0; background: #0d1322; }
+        button.btn-primary {
+            width: 100%;
+            margin-top: 1.75rem;
+            padding: 0.9rem 1.5rem;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button.btn-primary:hover {
+            background: var(--accent-hover);
+        }
+        button.btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        /* Progress bar */
+        #progressBox {
+            display: none;
+            margin-top: 1.5rem;
+        }
+        .progress-track {
+            background: #0d1322;
+            border-radius: 8px;
+            height: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3b82f6, #a78bfa);
+            border-radius: 8px;
+            transition: width 0.4s ease;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0%   { opacity: 1; }
+            50%  { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+        #progressLabel {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+        #results {
+            display: none;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .stat-card {
+            background: #0d1322;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+        .stat-val {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 0.85rem 1.75rem;
+            background: var(--success);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Excel AI &amp; Structural QA Engine</h1>
+            <p>Upload your evaluation spreadsheets for automated LLM detection, structural validation, and quality auditing</p>
+            <div id="modelBadge" style="display: none; margin-top: 0.9rem; font-size: 0.85rem; color: var(--text-muted);">
+                Model: <strong id="modelName" style="color: var(--text-primary);"></strong>
+                <span id="modelState" style="margin-left: 0.4rem;"></span>
+            </div>
+        </header>
+
+        <div class="card">
+            <form id="auditForm">
+                <div class="dropzone" id="dropzone">
+                    <svg width="48" height="48" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="margin: 0 auto; stroke-width: 1.5; color: #60a5fa;">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                    </svg>
+                    <p id="fileLabel"><strong>Click to select</strong> or drag and drop an Excel (.xlsx) or CSV file</p>
+                    <input type="file" id="fileInput" name="file" accept=".xlsx,.xls,.csv" style="display: none;" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="provider">Detection Engine</label>
+                        <select id="provider" name="provider">
+                            <option value="trained" selected>4d model (newest: DeBERTa-v3-large, trained 30 Sep; local, no cost)</option>
+                            <option value="preview-v5">v5 model (previous: DistilRoBERTa)</option>
+                            <option value="gptzero">GPTZero API (commercial, unvalidated: always Inconclusive)</option>
+                            <option value="originality">Originality.ai API (commercial, unvalidated: always Inconclusive)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Tab selection: shown for any workbook with more than one tab -->
+                <div id="sheetBox" class="form-row" style="display: none; margin-top: 1rem;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="sheetSelect">Tab</label>
+                        <select id="sheetSelect" name="sheet"></select>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.4rem;">Pick the tab to audit. Auto-detect reads the tab with the most rows, which may be an export rather than the task rows.</p>
+                    </div>
+                </div>
+
+                <!-- Locale selection: shown when the workbook has locale tabs or a locale column -->
+                <div id="localeBox" class="form-row" style="display: none; margin-top: 1rem;">
+                    <div class="form-group">
+                        <label>Locales</label>
+                        <div id="localePanel" class="locale-panel"></div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: 0.4rem;">Pick the locales to audit, or choose All. Each locale is audited on its own and gets its own report. A locale uses its own tab when the workbook has one, otherwise its rows of the locale column.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Column Selection Section -->
+                <div id="columnSelectionBox" style="display: none; margin-top: 1.5rem; background: #0d1322; border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem;">
+                    <label style="margin-bottom: 0.25rem; font-size: 0.95rem;">Select Columns to Detect AI From</label>
+                    <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 0.75rem;">Check one or more columns below to evaluate for AI text. We've auto-selected candidate rationale columns.</p>
+                    <div id="columnsList" style="display: flex; flex-wrap: wrap; gap: 0.6rem; max-height: 180px; overflow-y: auto; padding-right: 0.5rem;"></div>
+                </div>
+
+                <div style="margin-top: 1.25rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">
+                        <input type="checkbox" id="onlyAssigned" name="only_assigned" checked style="width: 1.1rem; height: 1.1rem; accent-color: var(--accent);">
+                        <span>Skip blank template rows (audit only completed/assigned evaluations)</span>
+                    </label>
+                </div>
+
+                <div style="margin-top: 0.6rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer; font-size: 0.9rem; font-weight: normal; color: var(--text-muted);">
+                        <input type="checkbox" id="explainTriggers" name="explain_triggers" checked style="width: 1.1rem; height: 1.1rem; accent-color: var(--accent);">
+                        <span>Find trigger sentences and words (what drove a high AI score; adds about a minute per 250 rows on the GPU)</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn-primary" id="submitBtn">Run Automated QA Audit</button>
+            </form>
+
+            <!-- Progress feedback (shown while auditing) -->
+            <div id="progressBox">
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+                <div id="progressLabel">Uploading file…</div>
+            </div>
+        </div>
+
+        <div class="card" id="results">
+            <h2>Audit Completed Successfully</h2>
+            <div id="detectedMeta" style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-muted);"></div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val" id="statRows" style="color: #60a5fa;">0</div>
+                    <div class="stat-label">Evaluated Rows</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statAIFlagged" style="color: var(--warning);">0</div>
+                    <div class="stat-label">Likely AI</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statHigh" style="color: #fb923c;">0</div>
+                    <div class="stat-label">High AI score &ndash; review</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statNotChecked" style="color: #94a3b8;">0</div>
+                    <div class="stat-label">Not checked</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statErrors" style="color: var(--danger);">0</div>
+                    <div class="stat-label">Structural Errors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statQuality" style="color: var(--success);">0%</div>
+                    <div class="stat-label">Avg Quality</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statCost" style="color: #38bdf8;">$0.00</div>
+                    <div class="stat-label">Est. Cost</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="statCache" style="color: #a78bfa;">0%</div>
+                    <div class="stat-label">Cache Saved</div>
+                </div>
+            </div>
+
+            <div id="agentsBox" style="display: none; margin-top: 1.5rem;">
+                <h3 style="margin-bottom: 0.5rem;">Flagged agents</h3>
+                <table id="agentsTable" style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+                    <thead><tr><th>Agent</th><th>Rows</th><th>Likely AI</th><th>High AI score</th><th>Highest score</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="triggerWordsBox" style="display: none; margin-top: 1.5rem;">
+                <h3 style="margin-bottom: 0.25rem;">Top trigger words</h3>
+                <p style="margin: 0 0 0.5rem; font-size: 0.8rem; color: var(--text-muted);">Words whose removal takes away the most of a row's AI signal. One that sits in most rows is likely shared wording (such as rubric terms) the model over-reacts to.</p>
+                <table id="triggerWordsTable" style="width: 100%; border-collapse: collapse; font-size: 0.9rem; text-align: left;">
+                    <thead><tr><th>Word or phrase</th><th>Rows it triggered</th><th>Agents</th><th>Average share of AI signal</th><th>In % of all rows</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="#" id="downloadLink" class="download-btn">Download Full Audited Workbook (.xlsx)</a>
+                <div id="downloadList" style="display: none; flex-direction: column; gap: 0.6rem; align-items: center;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const dropzone = document.getElementById('dropzone');
+        const fileInput = document.getElementById('fileInput');
+        const fileLabel = document.getElementById('fileLabel');
+        const form = document.getElementById('auditForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const resultsDiv = document.getElementById('results');
+        const columnSelectionBox = document.getElementById('columnSelectionBox');
+        const columnsList = document.getElementById('columnsList');
+        const progressBox = document.getElementById('progressBox');
+        const progressFill = document.getElementById('progressFill');
+        const progressLabel = document.getElementById('progressLabel');
+        const localeBox = document.getElementById('localeBox');
+        const localePanel = document.getElementById('localePanel');
+        const sheetBox = document.getElementById('sheetBox');
+        const sheetSelect = document.getElementById('sheetSelect');
+        const chosenSheet = () => (sheetBox.style.display !== 'none' ? sheetSelect.value : '');
+        function renderSheets(data) {
+            const sheets = data.sheets || [];
+            if (sheets.length < 2) { sheetBox.style.display = 'none'; sheetSelect.innerHTML = ''; return; }
+            sheetSelect.innerHTML = '';
+            const auto = document.createElement('option');
+            auto.value = ''; auto.textContent = `Auto-detect (${data.detected_sheet})`;
+            sheetSelect.appendChild(auto);
+            sheets.forEach(t => {
+                const o = document.createElement('option');
+                o.value = t.name; o.textContent = `${t.name} (${t.rows} rows)`;
+                sheetSelect.appendChild(o);
+            });
+            sheetBox.style.display = 'flex';
+        }
+        // Text from the upload (sheet, column, locale names) is escaped before it goes into HTML.
+        const esc = (v) => String(v).replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+
+        (async () => {
+            const badge = document.getElementById('modelBadge');
+            const name = document.getElementById('modelName');
+            const state = document.getElementById('modelState');
+            badge.style.display = 'block';
+            name.textContent = 'loading…';
+            try {
+                const info = await (await fetch('/api/v2/model')).json();
+                name.textContent = info.model_id;
+                state.textContent = info.validated ? '● ready' : '● not loaded';
+                state.style.color = info.validated ? 'var(--success)' : 'var(--warning)';
+            } catch (err) {
+                name.textContent = 'unavailable';
+            }
+        })();
+
+        function setProgress(pct, label) {
+            progressFill.style.width = pct + '%';
+            progressLabel.textContent = label;
+        }
+
+        function renderAgents(summary) {
+            const box = document.getElementById('agentsBox');
+            const body = document.querySelector('#agentsTable tbody');
+            body.innerHTML = '';
+            const flagged = (summary.agents || []).filter(a => a.likely_ai > 0 || a.high > 0);
+            flagged.forEach(a => {
+                const tr = document.createElement('tr');
+                const best = a.highest_score === null ? '' : (a.highest_score * 100).toFixed(1) + '%';
+                [a.agent, a.rows, a.likely_ai, a.high, best].forEach(v => {
+                    const td = document.createElement('td');
+                    td.textContent = v;   // agent names come from the upload: never innerHTML
+                    td.style.padding = '0.35rem 0.5rem';
+                    td.style.borderBottom = '1px solid var(--border)';
+                    tr.appendChild(td);
+                });
+                body.appendChild(tr);
+            });
+            box.style.display = flagged.length ? 'block' : 'none';
+        }
+
+        function renderTriggerWords(summary) {
+            const box = document.getElementById('triggerWordsBox');
+            const body = document.querySelector('#triggerWordsTable tbody');
+            body.innerHTML = '';
+            const words = (summary.trigger_words || []).slice(0, 10);
+            words.forEach(w => {
+                const tr = document.createElement('tr');
+                [w.phrase, w.trigger_rows, w.agents, (w.average_share * 100).toFixed(0) + '%',
+                 (w.share_of_rows * 100).toFixed(0) + '%'].forEach(v => {
+                    const td = document.createElement('td');
+                    td.textContent = v;   // words come from the upload: never innerHTML
+                    td.style.padding = '0.35rem 0.5rem';
+                    td.style.borderBottom = '1px solid var(--border)';
+                    tr.appendChild(td);
+                });
+                body.appendChild(tr);
+            });
+            box.style.display = words.length ? 'block' : 'none';
+        }
+
+        const localeBoxes = () => Array.from(localePanel.querySelectorAll('input[name="locale"]'));
+        const selectedLocales = () => localeBoxes().filter(b => b.checked).map(b => b.value);
+
+        function syncAll() {
+            const all = localePanel.querySelector('#localeAll');
+            const boxes = localeBoxes();
+            const n = boxes.filter(b => b.checked).length;
+            all.checked = n === boxes.length;
+            all.indeterminate = n > 0 && n < boxes.length;
+        }
+
+        // Several locales' summaries as one: tier counts and agents add up; trigger words merge by phrase.
+        function mergeSummaries(summaries, rowsTotal) {
+            const tier_counts = {};
+            summaries.forEach(s => Object.entries(s.tier_counts || {}).forEach(([k, v]) => { tier_counts[k] = (tier_counts[k] || 0) + v; }));
+            const agents = summaries.flatMap(s => s.agents || [])
+                .sort((a, b) => (b.likely_ai - a.likely_ai) || (b.high - a.high) || ((b.highest_score || 0) - (a.highest_score || 0)));
+            const words = {};
+            summaries.forEach(s => (s.trigger_words || []).forEach(w => {
+                const e = words[w.phrase] || (words[w.phrase] = { phrase: w.phrase, trigger_rows: 0, agents: 0, share_sum: 0, rows_containing: 0 });
+                e.trigger_rows += w.trigger_rows; e.agents += w.agents; e.rows_containing += w.rows_containing;
+                e.share_sum += w.average_share * w.trigger_rows;
+            }));
+            const trigger_words = Object.values(words).map(e => ({ phrase: e.phrase, trigger_rows: e.trigger_rows, agents: e.agents,
+                average_share: e.trigger_rows ? e.share_sum / e.trigger_rows : 0, rows_containing: e.rows_containing,
+                share_of_rows: rowsTotal ? e.rows_containing / rowsTotal : 0 }))
+                .sort((a, b) => (b.trigger_rows - a.trigger_rows) || (b.average_share - a.average_share));
+            return { tier_counts, agents, trigger_words };
+        }
+
+        function renderLocales(data) {
+            localePanel.innerHTML = '';
+            const locales = data.locales || [];
+            if (!locales.length) {
+                localeBox.style.display = 'none';
+                return;
+            }
+            const row = (value, label, meta, extraClass) => {
+                const item = document.createElement('label');
+                item.className = 'locale-item' + (extraClass ? ' ' + extraClass : '');
+                const box = document.createElement('input');
+                box.type = 'checkbox';
+                box.checked = true;
+                if (value === null) { box.id = 'localeAll'; } else { box.name = 'locale'; box.value = value; }
+                const text = document.createElement('span');
+                text.textContent = label;
+                const note = document.createElement('span');
+                note.className = 'locale-meta';
+                note.textContent = meta;
+                item.append(box, text, note);
+                localePanel.appendChild(item);
+                return box;
+            };
+            const all = row(null, 'All locales', `${locales.length} found`, 'locale-all');
+            locales.forEach(e => {
+                const assigned = e.assigned === null || e.assigned === undefined ? '' : `, ${e.assigned} assigned`;
+                row(e.locale, e.locale, `${e.rows} tasks${assigned} (${e.source === 'tab' ? 'tab' : 'locale column'})`);
+            });
+            all.addEventListener('change', () => { localeBoxes().forEach(b => { b.checked = all.checked; }); onLocaleChange(); });
+            localeBoxes().forEach(b => b.addEventListener('change', () => { syncAll(); onLocaleChange(); }));
+            localeBox.style.display = 'flex';
+        }
+
+        async function inspect(file, locale, sheet) {
+            columnSelectionBox.style.display = 'none';
+            columnsList.innerHTML = '<span style="color: var(--text-muted); font-size: 0.85rem;">Inspecting columns...</span>';
+            const checkForm = new FormData();
+            checkForm.append('file', file);
+            if (locale) {
+                checkForm.append('locale', locale);
+            }
+            if (sheet) {
+                checkForm.append('sheet', sheet);
+            }
+            const res = await fetch('/api/inspect-columns', { method: 'POST', body: checkForm });
+            if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                columnsList.innerHTML = `<span style="color: var(--danger); font-size: 0.85rem;">${esc(err.detail || 'Column inspection failed')}</span>`;
+                columnSelectionBox.style.display = 'block';
+                return null;
+            }
+            return res.json();
+        }
+
+        async function handleFileSelected(file) {
+            fileLabel.innerHTML = `Selected: <strong>${esc(file.name)}</strong>`;
+            localeBox.style.display = 'none';
+            sheetBox.style.display = 'none';
+            inspectedLocale = '';
+            try {
+                const data = await inspect(file, '', '');
+                if (data) {
+                    renderSheets(data);
+                    renderLocales(data);
+                    renderColumns(data);
+                }
+            } catch (err) {
+                console.warn('Column auto-inspection failed:', err);
+            }
+        }
+
+        sheetSelect.addEventListener('change', async () => {
+            if (!fileInput.files.length) return;
+            inspectedLocale = '';
+            try {
+                const data = await inspect(fileInput.files[0], '', sheetSelect.value);
+                if (data) { renderLocales(data); renderColumns(data); }
+            } catch (err) {
+                console.warn('Tab inspection failed:', err);
+            }
+        });
+
+        let inspectedLocale = '';
+        async function onLocaleChange() {
+            if (!fileInput.files.length) return;
+            const picked = selectedLocales();
+            const locale = picked.length === 1 ? picked[0] : '';  // columns come from the one locale, else the default sheet
+            if (locale === inspectedLocale) return;
+            inspectedLocale = locale;
+            try {
+                const data = await inspect(fileInput.files[0], locale, chosenSheet());
+                if (data) renderColumns(data);
+            } catch (err) {
+                console.warn('Locale inspection failed:', err);
+            }
+        }
+
+        function renderColumns(data) {
+            columnsList.innerHTML = '';
+            if (data.columns && data.columns.length > 0) {
+                data.columns.forEach(col => {
+                    const isPreselected = data.recommended.includes(col);
+                    const label = document.createElement('label');
+                    label.style.display = 'inline-flex';
+                    label.style.alignItems = 'center';
+                    label.style.gap = '0.4rem';
+                    label.style.background = isPreselected ? 'rgba(59, 130, 246, 0.15)' : 'rgba(255, 255, 255, 0.05)';
+                    label.style.border = isPreselected ? '1px solid var(--accent)' : '1px solid var(--border)';
+                    label.style.borderRadius = '6px';
+                    label.style.padding = '0.35rem 0.65rem';
+                    label.style.fontSize = '0.85rem';
+                    label.style.cursor = 'pointer';
+
+                    const chk = document.createElement('input');
+                    chk.type = 'checkbox';
+                    chk.name = 'target_column';
+                    chk.value = col;
+                    chk.checked = isPreselected;
+                    chk.style.accentColor = 'var(--accent)';
+
+                    chk.addEventListener('change', () => {
+                        label.style.background = chk.checked ? 'rgba(59, 130, 246, 0.15)' : 'rgba(255, 255, 255, 0.05)';
+                        label.style.border = chk.checked ? '1px solid var(--accent)' : '1px solid var(--border)';
+                    });
+
+                    label.appendChild(chk);
+                    label.appendChild(document.createTextNode(col));
+                    columnsList.appendChild(label);
+                });
+                columnSelectionBox.style.display = 'block';
+            }
+        }
+
+        dropzone.addEventListener('click', () => fileInput.click());
+        fileInput.addEventListener('change', () => {
+            if (fileInput.files.length) {
+                handleFileSelected(fileInput.files[0]);
+            }
+        });
+
+        dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('dragover'); });
+        dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropzone.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                fileInput.files = e.dataTransfer.files;
+                handleFileSelected(fileInput.files[0]);
+            }
+        });
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!fileInput.files.length) return alert('Please select a file.');
+
+            submitBtn.textContent = 'Processing QA Audit…';
+            submitBtn.disabled = true;
+            resultsDiv.style.display = 'none';
+            progressBox.style.display = 'block';
+            setProgress(10, 'Uploading file…');
+
+            const selectedCols = Array.from(document.querySelectorAll('input[name="target_column"]:checked')).map(c => c.value);
+
+            const localesToRun = localeBox.style.display !== 'none' ? selectedLocales() : [];
+            if (localeBox.style.display !== 'none' && !localesToRun.length) {
+                submitBtn.textContent = 'Run Automated QA Audit';
+                submitBtn.disabled = false;
+                progressBox.style.display = 'none';
+                return alert('Pick at least one locale.');
+            }
+            const runs = localesToRun.length ? localesToRun : [''];
+
+            const buildForm = (locale) => {
+                const formData = new FormData();
+                formData.append('file', fileInput.files[0]);
+                formData.append('provider', document.getElementById('provider').value);
+                formData.append('only_assigned', document.getElementById('onlyAssigned').checked);
+                formData.append('explain_triggers', document.getElementById('explainTriggers').checked);
+                if (selectedCols.length > 0) {
+                    formData.append('text_cols', JSON.stringify(selectedCols));
+                }
+                if (locale) {
+                    formData.append('locale', locale);
+                }
+                if (chosenSheet()) {
+                    formData.append('sheet', chosenSheet());
+                }
+                return formData;
+            };
+
+            // Animate progress while awaiting response
+            let pct = 15;
+            const ticker = setInterval(() => {
+                if (pct < 85) {
+                    pct += Math.random() * 4;
+                    const labels = [
+                        'Running structural QA…',
+                        'Detecting AI patterns…',
+                        'Evaluating justification quality…',
+                        'Computing proxy signals…',
+                        'Building audited workbook…'
+                    ];
+                    if (runs.length === 1) setProgress(Math.min(pct, 85), labels[Math.floor(pct / 20) % labels.length]);
+                }
+            }, 700);
+
+            const results = [];
+            try {
+                for (let i = 0; i < runs.length; i++) {
+                    if (runs.length > 1) setProgress(Math.max(10, Math.round(100 * i / runs.length)), `Auditing ${runs[i]} (${i + 1} of ${runs.length})…`);
+                    const res = await fetch('/api/audit', { method: 'POST', body: buildForm(runs[i]) });
+                    if (!res.ok) {
+                        const err = await res.json().catch(() => ({}));
+                        throw new Error((runs[i] ? runs[i] + ': ' : '') + (err.detail || 'Audit execution failed'));
+                    }
+                    results.push({ locale: runs[i], data: await res.json() });
+                }
+                clearInterval(ticker);
+                const data = results[results.length - 1].data;
+                const sum = (f) => results.reduce((t, r) => t + (f(r.data) || 0), 0);
+                const rowsTotal = sum(d => d.total_rows);
+                const merged = mergeSummaries(results.map(r => r.data.summary), rowsTotal);
+
+                setProgress(100, 'Done!');
+                setTimeout(() => { progressBox.style.display = 'none'; }, 800);
+
+                const sheet = data.summary.detected_sheet || 'Active';
+                const raterCol = data.summary.agent_column || 'none found';
+                const evaluatedCols = (data.summary.text_columns || [data.summary.justification_column || 'Rationale']).join(', ');
+                const localeMeta = data.summary.locale ? `Locale: <strong>${esc(data.summary.locale)}</strong> | ` : '';
+                document.getElementById('detectedMeta').innerHTML = results.length > 1
+                    ? `Locales: <strong>${results.map(r => esc(r.data.summary.locale || r.locale)).join(', ')}</strong> | Columns Scanned: <strong>${esc(evaluatedCols)}</strong>`
+                    : `${localeMeta}Sheet: <strong>${esc(sheet)}</strong> | Rater: <strong>${esc(raterCol)}</strong> | Columns Scanned: <strong>${esc(evaluatedCols)}</strong>`;
+
+                document.getElementById('statRows').textContent = rowsTotal;
+                document.getElementById('statAIFlagged').textContent = sum(d => d.ai_flagged_count);
+                const tiers = merged.tier_counts;
+                const high = Object.entries(tiers).find(([name]) => name.startsWith('High AI score'));
+                document.getElementById('statHigh').textContent = high ? high[1] : 0;
+                document.getElementById('statNotChecked').textContent = tiers['Not checked'] || 0;
+                renderAgents(merged);
+                renderTriggerWords(merged);
+                document.getElementById('statErrors').textContent = sum(d => d.structural_errors_count);
+                document.getElementById('statQuality').textContent = ((rowsTotal ? sum(d => d.avg_quality_score * d.total_rows) / rowsTotal : data.avg_quality_score) * 100).toFixed(1) + '%';
+                if (data.summary && data.summary.token_usage) {
+                    document.getElementById('statCost').textContent = '$' + sum(d => d.summary && d.summary.token_usage ? d.summary.token_usage.estimated_cost_usd : 0).toFixed(4);
+                }
+                if (data.summary && data.summary.cache_stats) {
+                    document.getElementById('statCache').textContent = (data.summary.cache_stats.hit_ratio * 100).toFixed(0) + '%';
+                }
+                const single = results.length === 1;
+                const downloadLink = document.getElementById('downloadLink');
+                const downloadList = document.getElementById('downloadList');
+                downloadLink.style.display = single ? '' : 'none';
+                downloadList.style.display = single ? 'none' : 'flex';
+                downloadList.innerHTML = '';
+                downloadLink.href = `/api/download/${data.output_filename}`;
+                if (!single) {
+                    results.forEach(r => {
+                        const a = document.createElement('a');
+                        a.className = 'download-btn';
+                        a.href = `/api/download/${r.data.output_filename}`;
+                        a.textContent = `Download ${r.data.summary.locale || r.locale} workbook (.xlsx)`;
+                        downloadList.appendChild(a);
+                    });
+                    try {
+                        const cres = await fetch('/api/combine', {
+                            method: 'POST', headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ filenames: results.map(r => r.data.output_filename) })
+                        });
+                        if (cres.ok) {
+                            const combined = await cres.json();
+                            const a = document.createElement('a');
+                            a.className = 'download-btn';
+                            a.href = `/api/download/${combined.output_filename}`;
+                            a.textContent = `Download combined workbook, all ${results.length} locales (.xlsx)`;
+                            downloadList.insertBefore(a, downloadList.firstChild);
+                        }
+                    } catch (e) { /* the per-locale workbooks above still work */ }
+                }
+
+                resultsDiv.style.display = 'block';
+                resultsDiv.scrollIntoView({ behavior: 'smooth' });
+            } catch (err) {
+                clearInterval(ticker);
+                progressBox.style.display = 'none';
+                alert('Error: ' + err.message);
+            } finally {
+                submitBtn.textContent = 'Run Automated QA Audit';
+                submitBtn.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

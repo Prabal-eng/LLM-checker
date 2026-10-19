@@ -1,0 +1,38 @@
+{
+  "binoculars:Qwen2.5-0.5B+Qwen2.5-0.5B-Instruct": {
+    "cpu": {
+      "estimated": true,
+      "sheet_cells_timed": 100,
+      "sheet_seconds_estimated": 2150.6,
+      "single_text_p95_s": 1.9854
+    },
+    "cuda": {
+      "estimated": false,
+      "sheet_cells_timed": 1500,
+      "sheet_seconds_estimated": 296.7,
+      "single_text_p95_s": 0.2938
+    }
+  },
+  "distilroberta-base": {
+    "cpu": {
+      "estimated": true,
+      "sheet_cells_timed": 100,
+      "sheet_seconds_estimated": 108.5,
+      "single_text_p95_s": 0.0863
+    },
+    "cuda": {
+      "estimated": false,
+      "sheet_cells_timed": 1500,
+      "sheet_seconds_estimated": 4.5,
+      "single_text_p95_s": 0.0086
+    }
+  },
+  "tfidf": {
+    "cpu": {
+      "estimated": true,
+      "sheet_cells_timed": 100,
+      "sheet_seconds_estimated": 1.4,
+      "single_text_p95_s": 0.0025
+    }
+  }
+}

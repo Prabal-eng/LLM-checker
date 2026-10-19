@@ -1,0 +1,534 @@
+{
+  "main": [
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.9748,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.703
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.9348,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.2992
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.6934,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.0656
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.8526,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.1995
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T05:26:42.091913+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "distilroberta-base",
+      "peak_train_vram_gb": 1.91,
+      "score_ms_per_text": 2.19,
+      "settings": {
+        "model_name": "distilroberta-base"
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 254.0,
+      "validation": {
+        "auroc": 0.9124,
+        "tpr_at_1pct_fpr": 0.4705
+      },
+      "validation_rows": 13844
+    },
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.9802,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.7185
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.9354,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.2353
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.7597,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.0894
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.879,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.1853
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T05:36:49.808600+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "roberta-base",
+      "peak_train_vram_gb": 2.55,
+      "score_ms_per_text": 4.19,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 2e-05,
+        "model_name": "FacebookAI/roberta-base"
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 549.3,
+      "validation": {
+        "auroc": 0.9237,
+        "tpr_at_1pct_fpr": 0.4653
+      },
+      "validation_rows": 13844
+    },
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.9839,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.8077
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.954,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.4736
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.7315,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.0905
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.8765,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.2553
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T05:53:36.954907+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "modernbert-base",
+      "peak_train_vram_gb": 1.99,
+      "score_ms_per_text": 7.85,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 3e-05,
+        "model_name": "answerdotai/ModernBERT-base",
+        "optimizer": "adamw8bit"
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 898.2,
+      "validation": {
+        "auroc": 0.9467,
+        "tpr_at_1pct_fpr": 0.5551
+      },
+      "validation_rows": 13844
+    },
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.9834,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.7622
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.9593,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.3985
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.8209,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.2206
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.9037,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.2162
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T06:11:10.237570+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "deberta-v3-base",
+      "peak_train_vram_gb": 2.3,
+      "score_ms_per_text": 7.6,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 2e-05,
+        "model_name": "microsoft/deberta-v3-base",
+        "optimizer": "adamw8bit",
+        "precision": "fp16"
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 947.8,
+      "validation": {
+        "auroc": 0.9466,
+        "tpr_at_1pct_fpr": 0.5391
+      },
+      "validation_rows": 13844
+    },
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.8597,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.1471
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.733,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.0544
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.5777,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.0136
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.6222,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.0439
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T06:50:34.464370+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "modernbert-large-lora",
+      "peak_train_vram_gb": 1.37,
+      "score_ms_per_text": 23.7,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lora": {
+          "alpha": 32,
+          "r": 16
+        },
+        "lr": 0.0002,
+        "model_name": "answerdotai/ModernBERT-large",
+        "score_batch_size": 16
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 2035.6,
+      "validation": {
+        "auroc": 0.7757,
+        "tpr_at_1pct_fpr": 0.1244
+      },
+      "validation_rows": 13844
+    },
+    {
+      "bands": {
+        "100-199": {
+          "ais": 3869,
+          "auroc": 0.9906,
+          "humans": 1983,
+          "tpr_at_1pct_fpr": 0.8395
+        },
+        "200+": {
+          "ais": 1985,
+          "auroc": 0.971,
+          "humans": 1963,
+          "tpr_at_1pct_fpr": 0.5008
+        },
+        "25-49": {
+          "ais": 884,
+          "auroc": 0.8932,
+          "humans": 908,
+          "tpr_at_1pct_fpr": 0.5147
+        },
+        "50-99": {
+          "ais": 842,
+          "auroc": 0.9458,
+          "humans": 1026,
+          "tpr_at_1pct_fpr": 0.4477
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T07:44:27.032241+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 256,
+      "name": "deberta-v3-large-lora",
+      "peak_train_vram_gb": 2.47,
+      "score_ms_per_text": 27.57,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lora": {
+          "alpha": 32,
+          "r": 16
+        },
+        "lr": 0.0002,
+        "model_name": "microsoft/deberta-v3-large",
+        "precision": "fp16",
+        "score_batch_size": 16
+      },
+      "track": "main",
+      "train_rows": 24000,
+      "train_seconds": 2850.5,
+      "validation": {
+        "auroc": 0.9694,
+        "tpr_at_1pct_fpr": 0.6477
+      },
+      "validation_rows": 13844
+    }
+  ],
+  "short": [
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.7744,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.2353
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9135,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.3802
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T07:48:36.906667+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "distilroberta-base",
+      "peak_train_vram_gb": 1.73,
+      "score_ms_per_text": 1.38,
+      "settings": {
+        "model_name": "distilroberta-base"
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 192.3,
+      "validation": {
+        "auroc": 0.8764,
+        "tpr_at_1pct_fpr": 0.346
+      },
+      "validation_rows": 13436
+    },
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.7999,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.2693
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9246,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.4233
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T07:57:08.794542+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "roberta-base",
+      "peak_train_vram_gb": 2.53,
+      "score_ms_per_text": 2.33,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 2e-05,
+        "model_name": "FacebookAI/roberta-base"
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 480.3,
+      "validation": {
+        "auroc": 0.8903,
+        "tpr_at_1pct_fpr": 0.3753
+      },
+      "validation_rows": 13436
+    },
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.7804,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.2492
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9258,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.4192
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T08:08:31.206195+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "modernbert-base",
+      "peak_train_vram_gb": 1.91,
+      "score_ms_per_text": 4.41,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 3e-05,
+        "model_name": "answerdotai/ModernBERT-base",
+        "optimizer": "adamw8bit"
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 622.9,
+      "validation": {
+        "auroc": 0.8935,
+        "tpr_at_1pct_fpr": 0.3634
+      },
+      "validation_rows": 13436
+    },
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.8382,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.2626
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9392,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.4098
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T08:20:10.060212+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "deberta-v3-base",
+      "peak_train_vram_gb": 2.29,
+      "score_ms_per_text": 3.8,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lr": 2e-05,
+        "model_name": "microsoft/deberta-v3-base",
+        "optimizer": "adamw8bit",
+        "precision": "fp16"
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 647.5,
+      "validation": {
+        "auroc": 0.9124,
+        "tpr_at_1pct_fpr": 0.3726
+      },
+      "validation_rows": 13436
+    },
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.8364,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.3249
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9435,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.5649
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T08:42:53.002168+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "modernbert-large-lora",
+      "peak_train_vram_gb": 1.2,
+      "score_ms_per_text": 12.97,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lora": {
+          "alpha": 32,
+          "r": 16
+        },
+        "lr": 0.0002,
+        "model_name": "answerdotai/ModernBERT-large",
+        "score_batch_size": 16
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 1188.4,
+      "validation": {
+        "auroc": 0.9191,
+        "tpr_at_1pct_fpr": 0.495
+      },
+      "validation_rows": 13436
+    },
+    {
+      "bands": {
+        "25-49": {
+          "ais": 2087,
+          "auroc": 0.889,
+          "humans": 1708,
+          "tpr_at_1pct_fpr": 0.3555
+        },
+        "50-99": {
+          "ais": 5486,
+          "auroc": 0.9604,
+          "humans": 4155,
+          "tpr_at_1pct_fpr": 0.529
+        }
+      },
+      "corpus_version": "v3",
+      "finished_at": "2026-09-28T09:14:05.776077+00:00",
+      "locked_split_reads": 0,
+      "max_tokens": 160,
+      "name": "deberta-v3-large-lora",
+      "peak_train_vram_gb": 2.26,
+      "score_ms_per_text": 15.09,
+      "settings": {
+        "gradient_checkpointing": true,
+        "lora": {
+          "alpha": 32,
+          "r": 16
+        },
+        "lr": 0.0002,
+        "model_name": "microsoft/deberta-v3-large",
+        "precision": "fp16",
+        "score_batch_size": 16
+      },
+      "track": "short",
+      "train_rows": 24000,
+      "train_seconds": 1669.7,
+      "validation": {
+        "auroc": 0.9417,
+        "tpr_at_1pct_fpr": 0.484
+      },
+      "validation_rows": 13436
+    }
+  ]
+}

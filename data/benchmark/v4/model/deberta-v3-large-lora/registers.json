@@ -1,0 +1,611 @@
+{
+  "adopted": false,
+  "cells": [
+    {
+      "ai_min": 0.9878361149975348,
+      "ais": 1736,
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.002876367107942936,
+      "humans": 1040,
+      "own": false,
+      "register": "assistant",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9273943011848275,
+      "ais": 1111,
+      "band": 25,
+      "false_ai": 4,
+      "false_ai_upper95": 0.009815247695330015,
+      "humans": 930,
+      "own": true,
+      "register": "essay_academic",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9878361149975348,
+      "ais": 739,
+      "band": 25,
+      "false_ai": 1,
+      "false_ai_upper95": 0.01213649694882096,
+      "humans": 389,
+      "own": false,
+      "register": "news_expository",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9878361149975348,
+      "ais": 1051,
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.003216034943564603,
+      "humans": 930,
+      "own": false,
+      "register": "qa_forum",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9878361149975348,
+      "ais": 697,
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.006353628253217003,
+      "humans": 470,
+      "own": false,
+      "register": "social_review",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.990838004798903,
+      "ais": 4171,
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.0019754273087318284,
+      "humans": 1515,
+      "own": false,
+      "register": "assistant",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9636295667811726,
+      "ais": 4178,
+      "band": 50,
+      "false_ai": 8,
+      "false_ai_upper95": 0.005886357369530238,
+      "humans": 2449,
+      "own": true,
+      "register": "essay_academic",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9687407885980752,
+      "ais": 4150,
+      "band": 50,
+      "false_ai": 8,
+      "false_ai_upper95": 0.006519063112628734,
+      "humans": 2211,
+      "own": true,
+      "register": "news_expository",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9663664541851196,
+      "ais": 3598,
+      "band": 50,
+      "false_ai": 3,
+      "false_ai_upper95": 0.002965774697633877,
+      "humans": 2612,
+      "own": true,
+      "register": "qa_forum",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9949027056912227,
+      "ais": 2594,
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.0018870774239247016,
+      "humans": 1586,
+      "own": true,
+      "register": "social_review",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9406049559717946,
+      "ais": 1102,
+      "band": 100,
+      "false_ai": 5,
+      "false_ai_upper95": 0.022523013770571844,
+      "humans": 464,
+      "own": false,
+      "register": "assistant",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9137699228463865,
+      "ais": 2871,
+      "band": 100,
+      "false_ai": 8,
+      "false_ai_upper95": 0.010958383502288246,
+      "humans": 1314,
+      "own": true,
+      "register": "essay_academic",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9523524383987093,
+      "ais": 2599,
+      "band": 100,
+      "false_ai": 4,
+      "false_ai_upper95": 0.008968928205857958,
+      "humans": 1018,
+      "own": true,
+      "register": "news_expository",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.8272756768506906,
+      "ais": 1478,
+      "band": 100,
+      "false_ai": 36,
+      "false_ai_upper95": 0.04740649274719602,
+      "humans": 997,
+      "own": true,
+      "register": "qa_forum",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9406049559717946,
+      "ais": 1712,
+      "band": 100,
+      "false_ai": 2,
+      "false_ai_upper95": 0.008599034167413963,
+      "humans": 730,
+      "own": false,
+      "register": "social_review",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9601114962899469,
+      "ais": 2388,
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.015113773151500549,
+      "humans": 312,
+      "own": false,
+      "register": "assistant",
+      "within_target": false
+    },
+    {
+      "ai_min": 0.9718433827040214,
+      "ais": 1738,
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0029875593215504094,
+      "humans": 1586,
+      "own": true,
+      "register": "essay_academic",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9716371672270007,
+      "ais": 3784,
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0023972560112797405,
+      "humans": 1977,
+      "own": true,
+      "register": "news_expository",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.9601114962899469,
+      "ais": 1339,
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.003457284087482374,
+      "humans": 865,
+      "own": false,
+      "register": "qa_forum",
+      "within_target": true
+    },
+    {
+      "ai_min": 0.912728803953212,
+      "ais": 1171,
+      "band": 200,
+      "false_ai": 3,
+      "false_ai_upper95": 0.00883727689281923,
+      "humans": 875,
+      "own": true,
+      "register": "social_review",
+      "within_target": false
+    }
+  ],
+  "classifier_fit_rows": 99894,
+  "every_cell_in_target": false,
+  "every_source_in_target": false,
+  "finished_at": "2026-09-30T17:56:22.706708+00:00",
+  "gain_points": 9.12,
+  "locked_split_reads": 0,
+  "pooled_detection": 0.4052,
+  "register_detection": 0.4964,
+  "sources": [
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.033847610681619573,
+      "humans": 87,
+      "source": "aita2026",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 3,
+      "false_ai_upper95": 0.06548327985535148,
+      "humans": 116,
+      "source": "beemo",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.012940465700466402,
+      "humans": 230,
+      "source": "dactyl",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.00890261930455333,
+      "humans": 335,
+      "source": "dolly",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.006816234766836907,
+      "humans": 438,
+      "source": "hc3",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.008426814212612592,
+      "humans": 354,
+      "source": "maga",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0036354986779024716,
+      "humans": 1303,
+      "source": "mage",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 1,
+      "false_ai_upper95": 0.03229696379917888,
+      "humans": 145,
+      "source": "mirage",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.018434990637976174,
+      "humans": 161,
+      "source": "no_robots",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.020309637820788727,
+      "humans": 146,
+      "source": "oasst1",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.008850019256779423,
+      "humans": 337,
+      "source": "raid",
+      "within_target": true
+    },
+    {
+      "band": 25,
+      "false_ai": 0,
+      "false_ai_upper95": 0.027609200166909386,
+      "humans": 107,
+      "source": "stackexchange",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.00751752610650474,
+      "humans": 397,
+      "source": "aita2026",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 7,
+      "false_ai_upper95": 0.06228000640866188,
+      "humans": 208,
+      "source": "beemo",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.003198864432306285,
+      "humans": 935,
+      "source": "dactyl",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.007461355528799601,
+      "humans": 400,
+      "source": "dolly",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 1,
+      "false_ai_upper95": 0.00526001006242321,
+      "humans": 900,
+      "source": "hc3",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0032208238976101796,
+      "humans": 1471,
+      "source": "maga",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 2,
+      "false_ai_upper95": 0.0020784036161078335,
+      "humans": 3027,
+      "source": "mage",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 1,
+      "false_ai_upper95": 0.008194977476737447,
+      "humans": 577,
+      "source": "mirage",
+      "within_target": false
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.010993487684164959,
+      "humans": 271,
+      "source": "no_robots",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 7,
+      "false_ai_upper95": 0.03755561071467799,
+      "humans": 347,
+      "source": "oasst1",
+      "within_target": false
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.0020193701136304483,
+      "humans": 1482,
+      "source": "raid",
+      "within_target": true
+    },
+    {
+      "band": 50,
+      "false_ai": 0,
+      "false_ai_upper95": 0.008333053260890996,
+      "humans": 358,
+      "source": "stackexchange",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 5,
+      "false_ai_upper95": 0.1333596359045467,
+      "humans": 76,
+      "source": "beemo",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 0,
+      "false_ai_upper95": 0.010756646984320313,
+      "humans": 277,
+      "source": "dactyl",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 4,
+      "false_ai_upper95": 0.07345503959240966,
+      "humans": 122,
+      "source": "dolly",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 0,
+      "false_ai_upper95": 0.008218745894791959,
+      "humans": 363,
+      "source": "hc3",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 9,
+      "false_ai_upper95": 0.025234542895454622,
+      "humans": 619,
+      "source": "maga",
+      "within_target": false
+    },
+    {
+      "band": 100,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0036188586447208496,
+      "humans": 1309,
+      "source": "mage",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 3,
+      "false_ai_upper95": 0.010945591596838004,
+      "humans": 706,
+      "source": "mirage",
+      "within_target": false
+    },
+    {
+      "band": 100,
+      "false_ai": 5,
+      "false_ai_upper95": 0.07799018002517796,
+      "humans": 132,
+      "source": "no_robots",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 27,
+      "false_ai_upper95": 0.23068693401901982,
+      "humans": 156,
+      "source": "oasst1",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 1,
+      "false_ai_upper95": 0.007690161991706024,
+      "humans": 615,
+      "source": "raid",
+      "within_target": true
+    },
+    {
+      "band": 100,
+      "false_ai": 0,
+      "false_ai_upper95": 0.020037951689104157,
+      "humans": 148,
+      "source": "stackexchange",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.005833955600556271,
+      "humans": 512,
+      "source": "aita2026",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.05654796638607016,
+      "humans": 82,
+      "source": "beemo",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.004827939955948845,
+      "humans": 619,
+      "source": "dactyl",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.043727554781889444,
+      "humans": 67,
+      "source": "dolly",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.010002432437677691,
+      "humans": 298,
+      "source": "hc3",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 2,
+      "false_ai_upper95": 0.008540708314136648,
+      "humans": 735,
+      "source": "maga",
+      "within_target": false
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.0020234620521217585,
+      "humans": 1479,
+      "source": "mage",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.053011054951253765,
+      "humans": 55,
+      "source": "mirage",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.05336787937288497,
+      "humans": 87,
+      "source": "no_robots",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.027924599432367112,
+      "humans": 168,
+      "source": "oasst1",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 1,
+      "false_ai_upper95": 0.0036892165824682593,
+      "humans": 1284,
+      "source": "raid",
+      "within_target": true
+    },
+    {
+      "band": 200,
+      "false_ai": 0,
+      "false_ai_upper95": 0.012996605476660697,
+      "humans": 229,
+      "source": "stackexchange",
+      "within_target": true
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "deberta-v3-large-lora-authorship-4d": {
+    "model_id": "deberta-v3-large-lora-authorship-4d",
+    "measured_at": "2026-10-01T14:29:10+00:00",
+    "bands": {
+      "high_min": 0.75,
+      "moderate_min": 0.5,
+      "second_look_min": 0.3
+    },
+    "slices": {
+      "25-100": {
+        "human_texts": 14132,
+        "ai_texts": 24025,
+        "tiers": {
+          "Likely AI": {
+            "human": 0.0004,
+            "ai": 0.3445
+          },
+          "High AI score \u2013 review": {
+            "human": 0.0639,
+            "ai": 0.57
+          },
+          "Moderate AI score": {
+            "human": 0.0489,
+            "ai": 0.0314
+          },
+          "Needs a second look": {
+            "human": 0.0456,
+            "ai": 0.0149
+          },
+          "Low AI score": {
+            "human": 0.8412,
+            "ai": 0.0393
+          }
+        }
+      },
+      "all": {
+        "human_texts": 24270,
+        "ai_texts": 44207,
+        "tiers": {
+          "Likely AI": {
+            "human": 0.0012,
+            "ai": 0.411
+          },
+          "High AI score \u2013 review": {
+            "human": 0.0766,
+            "ai": 0.5245
+          },
+          "Moderate AI score": {
+            "human": 0.0645,
+            "ai": 0.0241
+          },
+          "Needs a second look": {
+            "human": 0.0518,
+            "ai": 0.0109
+          },
+          "Low AI score": {
+            "human": 0.8059,
+            "ai": 0.0295
+          }
+        }
+      }
+    },
+    "sources": {
+      "main": "9889fad9fa5e831b241b053cba34fcfb3fd3ec315d58655dc2127e903bf7cd20",
+      "short": "22426bef1ad5fb5d765820bb2feee66e66ac7bf0cc44ab369d91d86544b673b9"
+    },
+    "notes": [
+      "Rates are measured on public validation writing, not on rater rationales; rater text may differ.",
+      "Validation includes sentence-aligned excerpts of longer texts, as calibration did.",
+      "Later-window vetoes on long texts and disguised-character handling are not replayed."
+    ]
+  }
+}

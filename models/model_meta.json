@@ -1,0 +1,9 @@
+{
+  "model_type": "Hybrid Stylometric & N-Gram Classifier (Calibrated)",
+  "accuracy": 0.9947,
+  "roc_auc": 0.9997,
+  "false_positive_rate": 0.0036,
+  "train_samples": 5280,
+  "test_samples": 1133,
+  "model_file": "C:\\Users\\prabd\\.gemini\\antigravity-ide\\scratch\\excel-ai-qa-pipeline\\models\\indomain_ai_classifier.joblib"
+}

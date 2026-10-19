@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "inhouse|human": 3770,
+    "stress|ai": 41145,
+    "stress|human": 393,
+    "test_unseen_generator|ai": 1931,
+    "test|ai": 18512,
+    "test|human": 20730
+  },
+  "history": [
+    {
+      "at": "2026-09-29T23:00:20.928689+00:00",
+      "previous": "5d1e340a78f6eb48db8865d0ec474a7be34f1f35162931abb3bb2639c23d133d",
+      "reason": "Amendment-13-Ralph-R12-part-1-fixes-length-matching-load-trims-generation-filters-2026-09-29-lock-never-read"
+    }
+  ],
+  "locked_splits": [
+    "test",
+    "test_unseen_generator",
+    "stress",
+    "inhouse"
+  ],
+  "sha256": "549b3f1040890c881f898d819f6e8c637499884cbab36543edc0424ba46d2d24"
+}

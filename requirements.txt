@@ -1,0 +1,16 @@
+pandas==3.0.6
+openpyxl==3.1.5
+pydantic==2.13.4
+requests==2.34.2
+python-dotenv==1.2.2
+pytest==9.1.1
+pytest-cov==7.1.0
+fastapi==0.141.1
+starlette==1.6.0
+httpx2==2.13.1
+uvicorn==0.53.0
+python-multipart==0.0.32
+scikit-learn==1.9.1
+joblib==1.6.0
+tqdm==4.68.0
+pyarrow==25.0.1

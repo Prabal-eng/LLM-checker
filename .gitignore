@@ -1,0 +1,38 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.cache/
+
+# Environments
+.env
+venv/
+env/
+ENV/
+
+# Data uploads and outputs
+data/uploads/*
+!data/uploads/.gitkeep
+data/output/*
+!data/output/.gitkeep
+
+# Ignore large/generated Excel workbooks in root
+*.xlsx
+*.xls
+!data/samples/*.xlsx
+
+# Scratch directory
+scratch/
+
+# Real client workbooks (contain rater identities) must never be committed
+data/samples/active_evals*.xlsx
+
+# Bake-off crash-recovery checkpoints (working state, not results)
+data/benchmark/*/bakeoff/results/partial/
+.superpowers/
+
+.llm-checker.pid
+llm-checker.log

@@ -1,0 +1,28 @@
+{
+  "artifact_path": "D:\\llm-authorship-corpus\\models\\distilroberta-authorship-v3\\epoch-1",
+  "artifact_sha256": "76350dc234d8bccea5fea4dbd022e78130fe8d381bdc892e91cde32f7e3916dd",
+  "balance_sources": true,
+  "base_model": "distilroberta-base",
+  "chosen_epoch": 1,
+  "corpus_lock_sha256": "76b3343356b0594a5212e409b791075969a539f3e3f72867d805cced42bee412",
+  "epochs": {
+    "0": {
+      "auroc": 0.9771,
+      "tpr_at_1pct_fpr": 0.7599
+    },
+    "1": {
+      "auroc": 0.9797,
+      "tpr_at_1pct_fpr": 0.7999
+    }
+  },
+  "finished_at": "2026-09-27T06:39:02.431421+00:00",
+  "locked_split_reads": 0,
+  "max_tokens": 256,
+  "model_id": "distilroberta-authorship-v3",
+  "text_normalization": "collapse_whitespace",
+  "train_excerpts": 0,
+  "train_ids_sha256": "5ab9cca2718e16374f572eccb4651637998df4311695d8f2ca3f32815fae261f",
+  "train_rows": 111434,
+  "validation_rows": 12299,
+  "variant": "main"
+}

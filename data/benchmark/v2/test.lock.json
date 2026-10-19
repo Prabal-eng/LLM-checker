@@ -1,0 +1,24 @@
+{
+  "counts": {
+    "inhouse|human": 3770,
+    "stress|ai": 92668,
+    "stress|human": 393,
+    "test_unseen_generator|ai": 1153,
+    "test|ai": 11673,
+    "test|human": 15147
+  },
+  "history": [
+    {
+      "at": "2026-09-26T19:35:51.892339+00:00",
+      "previous": "d3f1a8ca42e73a421731dc640df5ba9e66f5c3fa50e9bf8009bf740cfb53a4e5",
+      "reason": "rasbt50k made diagnostic-only before any model run: shortcut probe AUC 0.98 (mid-sentence human chunks, stripped code, genre mismatch)"
+    }
+  ],
+  "locked_splits": [
+    "test",
+    "test_unseen_generator",
+    "stress",
+    "inhouse"
+  ],
+  "sha256": "76b3343356b0594a5212e409b791075969a539f3e3f72867d805cced42bee412"
+}
